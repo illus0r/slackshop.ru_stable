@@ -1,0 +1,55 @@
+<html>
+  <head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="jquery.scrolling-parallax.js"></script>
+  <style>
+body{
+  height: 6400px;
+}
+
+  </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+$(function() {
+    
+
+    $.scrollingParallax('img/parallax3-rock3.png', {
+        staticSpeed : 1,
+        loopIt : false,
+        staticScrollLimit : false,
+        bgHeight: '500%',
+        disableIE6 : true
+    });
+
+    $.scrollingParallax('img/parallax3-rock1.png', {
+        staticSpeed : 0.4,
+        loopIt : false,
+        staticScrollLimit : false,
+        bgHeight: '500%',
+        disableIE6 : true
+    });
+
+    $.scrollingParallax('img/parallax3-rock2.png', {
+        staticSpeed : 0.3,
+        loopIt : false,
+        staticScrollLimit : false,
+        bgHeight: '500%',
+        disableIE6 : true
+    });
+    
+    $.scrollingParallax('img/parallax3-1-hills.png', {
+        staticSpeed : 0.05,
+        loopIt : false,
+        staticScrollLimit : false,
+        bgHeight: '150%',
+        disableIE6 : true
+    });
+    
+});
+
+</script>
+  </body>
+</html>
+
