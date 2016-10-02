@@ -1,9 +1,37 @@
 ---
 ---
-@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0b1 | 201101  NOTE: WORK IN PROGRESS USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
-// Import partials from the `minima` theme.
-@import "helper/reset",
-        "base/typo",
-        "base/layout",
-        "layouts/course";
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.layout-course { position: relative; /*@keyframes clouds {*/ /*from { */ /*background-position-x: 0px; */ /*}*/ /*to {*/ /*background-position-x: 1440px;*/ /*}*/ /*}*/ }
+.layout-course .parallax-bg { background-size: 3334px auto; background-attachment: fixed; background-position-x: 50%; bottom: 0; left: 0; position: absolute; right: 0; top: 0; z-index: -1; }
+.layout-course .parallax-bg-sky { background-image: url(/img/course/sky.svg); }
+.layout-course .parallax-bg-hills { background-image: url(/img/course/hills.svg); }
+.layout-course .parallax-bg-forest1 { background-image: url(/img/course/forest1.svg); }
+.layout-course .parallax-bg-forest2 { background-image: url(/img/course/forest2.svg); }
+.layout-course .parallax-bg-rocks { background-image: url(/img/course/rocks.svg); }
+.layout-course .parallax-bg-clouds { /*animation: clouds 10s linear infinite;*/ /*background-attachment: initial;*/ /*background-image: url(/img/course/clouds.svg);*/ background-color: #fff; /*background-position-y: 0;*/ /*background-repeat: repeat-x;*/ /*background-size: 1440px auto;*/ /*position: fixed;*/ /*top: -20%;*/ }
+.layout-course article { text-align: center; }
+.layout-course article .payment { margin-top: -100px; overflow: hidden; }
