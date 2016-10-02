@@ -1,0 +1,107 @@
+---
+---
+
+.layout-course .parallax-bg-hills{
+    -skrollr-animation-name: parallax-bg-hills;
+}
+@-skrollr-keyframes parallax-bg-hills{
+  top{
+    background-position-y: 10%;
+  }
+  bottom{
+    background-position-y: 20%;
+  }
+}
+
+.layout-course .parallax-bg-forest1{
+    -skrollr-animation-name: parallax-bg-forest1;
+}
+@-skrollr-keyframes parallax-bg-forest1{
+  top{
+    background-position-y: 25%;
+  }
+  bottom{
+    background-position-y: 35%;
+  }
+}
+
+.layout-course .parallax-bg-forest2{
+    -skrollr-animation-name: parallax-bg-forest2;
+}
+@-skrollr-keyframes parallax-bg-forest2{
+  top{
+    background-position-y: 25%;
+  }
+  bottom{
+    background-position-y: 38%;
+  }
+}
+
+.layout-course .parallax-bg-rocks{
+    -skrollr-animation-name: parallax-bg-rocks;
+}
+@-skrollr-keyframes parallax-bg-rocks{
+  top{
+    background-position-y: 0%;
+  }
+  bottom{
+    background-position-y: 100%;
+  }
+}
+
+.layout-course .parallax-bg-clouds{
+    -skrollr-animation-name: parallax-bg-clouds;
+}
+@-skrollr-keyframes parallax-bg-clouds{
+  skrollr-2000-end{
+    opacity#{"[quadratic]"}: 0.001;
+  }
+  skrollr-end{
+    opacity#{"[quadratic]"}: 0.8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+#foo {
+    -skrollr-animation-name:animation1;
+}
+
+@-skrollr-keyframes animation1 {
+    skrollr-0 {
+        left:100%;
+        color:rgba(1,0,0,0.999);
+    }
+
+    skrollr-2000 {
+        left:0%;
+        color:rgba(255,1,0,0.999);
+    }
+}
+
+.turbine{
+  -skrollr-animation-name: animation2;
+}
+
+@-skrollr-keyframes animation2 {
+    skrollr-0 {
+      background-color:rgba(0,0,255,0.999);
+      transform:rotate(0deg);
+    }
+
+    skrollr-500 {
+      background-color:rgba(255,0,0,0.999);
+      transform:rotate(360deg);
+    }
+}
+
+
+

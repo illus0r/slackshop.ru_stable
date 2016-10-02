@@ -1,0 +1,85 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="http://scrollmagic.io/js/lib/greensock/TweenMax.min.js"></script>
+  <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+  <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+  <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<style type="text/css">
+	.parallaxParent {
+		height: 100vh;
+		overflow: hidden;
+	}
+	.parallaxParent > * {
+		height: 200%;
+		position: relative;
+		top: -100%;
+	}
+</style>
+<div class="spacer s0"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-image: url(http://scrollmagic.io/img/example_parallax_l1.gif);"></div>
+</div>
+<div class="spacer s1">
+	<div class="box2 blue">
+		<p>Content 1</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s0"></div>
+<div id="parallax2" class="parallaxParent">
+	<div style="background-image: url(http://scrollmagic.io/img/example_parallax_l2.png);"></div>
+</div>
+<div class="spacer s1">
+	<div class="box2 blue">
+		<p>Content 2</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s0"></div>
+<div id="parallax3" class="parallaxParent">
+	<div style="background-image: url(http://scrollmagic.io/img/example_parallax_l3.gif);"></div>
+</div>
+<div class="spacer s2"></div>
+
+<script>
+// init controller
+var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+function move (what, progress) {
+    var to = progress * 80;
+    TweenMax.to(what, 0.3, {y: to + "%", overwrite: 5, force3D: true});
+}
+// build scenes
+new ScrollMagic.Scene({triggerElement: "#parallax1"})
+                .on("progress", function (e) {
+                    move ("#parallax1 > div", e.progress);
+                })
+                .addIndicators()
+                .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: "#parallax2"})
+                .on("progress", function (e) {
+                    move ("#parallax2 > div", e.progress);
+                })
+                .addIndicators()
+                .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: "#parallax3"})
+                .on("progress", function (e) {
+                    move ("#parallax3 > div", e.progress);
+                })
+                .addIndicators()
+                .addTo(controller);
+</script>
+</body>
+</html>
+

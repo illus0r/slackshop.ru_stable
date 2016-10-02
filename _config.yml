@@ -1,0 +1,17 @@
+url: "http://slackshop.ru"
+
+# Build settings
+markdown: kramdown
+
+collections:
+  courses:
+    output: true
+    permalink: /:path/
+  
+
+defaults:
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: course

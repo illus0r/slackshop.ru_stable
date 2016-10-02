@@ -1,0 +1,15 @@
+{
+  "name": "skrollr-colors",
+  "homepage": "https://github.com/StarterSquad/skrollr-colors",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "238318fbdf7b769b052704431971ed32c5137c89"
+  },
+  "_source": "https://github.com/StarterSquad/skrollr-colors.git",
+  "_target": "^1.0.0",
+  "_originalSource": "skrollr-colors",
+  "_direct": true
+}
