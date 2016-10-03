@@ -1,51 +1,51 @@
 ---
 ---
 
-.layout-course .parallax-bg-hills{
-  -skrollr-animation-name: parallax-bg-hills;
+.layout-course .parallax-container .hills{
+  -skrollr-animation-name: hills;
 }
-@-skrollr-keyframes parallax-bg-hills{
-  top{
-    background-position: 50% 10%;
+@-skrollr-keyframes hills{
+  start{
+    transform: translate3d(-50%,-10%,0);
   }
-  bottom{
-    background-position: 50% 20%;
-  }
-}
-
-.layout-course .parallax-bg-forest1{
-  -skrollr-animation-name: parallax-bg-forest1;
-}
-@-skrollr-keyframes parallax-bg-forest1{
-  top{
-    background-position: 50% 25%;
-  }
-  bottom{
-    background-position: 50% 35%;
+  end{
+    transform: translate3d(-50%,-20%,0);
   }
 }
 
-.layout-course .parallax-bg-forest2{
-  -skrollr-animation-name: parallax-bg-forest2;
+.layout-course .parallax-container .forest1{
+  -skrollr-animation-name: forest1;
 }
-@-skrollr-keyframes parallax-bg-forest2{
-  top{
-    background-position: 50% 25%;
+@-skrollr-keyframes forest1{
+  start{
+    transform: translate3d(-50%,-15%,0);
   }
-  bottom{
-    background-position: 50% 38%;
+  end{
+    transform: translate3d(-50%,-25%,0);
   }
 }
 
-.layout-course .parallax-bg-rocks{
-  -skrollr-animation-name: parallax-bg-rocks;
+.layout-course .parallax-container .forest2{
+  -skrollr-animation-name: forest2;
 }
-@-skrollr-keyframes parallax-bg-rocks{
-  top{
-    background-position: 50% 0%;
+@-skrollr-keyframes forest2{
+  start{
+    transform: translate3d(-50%,-15%,0);
   }
-  bottom{
-    background-position: 50% 100%;
+  end{
+    transform: translate3d(-50%,-28%,0);
+  }
+}
+
+.layout-course .parallax-container .rocks{
+  -skrollr-animation-name: rocks;
+}
+@-skrollr-keyframes rocks{
+  start{
+    transform: translate3d(-50%,-0%,0);
+  }
+  end{
+    transform: translate3d(-50%,-50%,0);
   }
 }
 

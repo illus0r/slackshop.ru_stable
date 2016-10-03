@@ -11,12 +11,13 @@ permalink: new/
   <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
 </head>
 <body class="layout-course">
-<div class="parallax-bg parallax-bg-sky"></div>
-<div class="parallax-bg parallax-bg-hills"></div>
-<div class="parallax-bg parallax-bg-forest1"></div>
-<div class="parallax-bg parallax-bg-forest2"></div>
-<div class="parallax-bg parallax-bg-rocks"></div>
-<div class="parallax-bg parallax-bg-clouds"></div>
+<div class="parallax-container">
+  <img src="/img/course/sky.svg" class="parallax sky">
+  <img src="/img/course/hills.svg" class="parallax hills">
+  <img src="/img/course/forest1.svg" class="parallax forest1">
+  <img src="/img/course/forest2.svg" class="parallax forest2">
+  <img src="/img/course/rocks.svg" class="parallax rocks">
+</div>
 
 <article>
 <section class="header">    <img src="/img/course/header.png" alt=""></section>
@@ -28,8 +29,35 @@ permalink: new/
 <section class="payment">   <img src="/img/course/payment.png" alt=""></section>
 </article>
 
+<script>
+//var rocks = $(".parallax.rocks");
+//function repeatOften() {
+//  console.log(window.scrollY);
+//  rocks.css("transform","translate3d(-50%," + window.scrollY + "px,0)");
+//  requestAnimationFrame(repeatOften);
+//  //.toFixed(2)
+//}
+//repeatOften();
+
+
+ // window.addEventListener("scroll", function(event){
+
+ // 	var top = this.pageYOffset;
+
+ // 	var layers = document.getElementsByClassName("parallax");
+ // 	var layer, speed, yPos;
+ // 	for (var i = 0; i < layers.length; i++) {
+ // 		layer = layers[i];
+ // 		speed = layer.getAttribute('data-speed');
+ // 		var yPos = -(top * speed / 100);
+ // 		layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+
+ // 	}
+ // });
+
+</script>
 <script type="text/javascript" src="/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>
-<script type="text/javascript" src="/bower_components/skrollr-colors/dist/skroll-colors.min.js"></script>
+<!--<script type="text/javascript" src="/bower_components/skrollr-colors/dist/skroll-colors.min.js"></script>-->
 <script type="text/javascript" src="/bower_components/skrollr/dist/skrollr.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
