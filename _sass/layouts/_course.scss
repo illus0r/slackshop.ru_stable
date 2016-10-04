@@ -5,7 +5,9 @@
     position: fixed;
     right: 100px;
     top: 0;
-    z-index: -1;
+    &.parallax-container-back{
+      z-index: -1;
+    }
     .parallax{
       height: auto;
       left: 50%;
@@ -14,9 +16,20 @@
       transform: translate3d(-50%,0,0);
       width: 3334px;
     }
+    .rocks{
+    }
   }
   article{
     text-align: center;
+    .header{
+      z-index: 2;
+      position: absolute;
+      left: 50%;
+      transform:  translate3d(-50%, 0, 0);
+    }
+    .summary{
+      padding-top: 330px;
+    }
     .payment{
       margin-top: -100px;
       overflow: hidden;
