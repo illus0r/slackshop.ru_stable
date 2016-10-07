@@ -18,17 +18,47 @@
     }
     .rocks{
     }
+    .clouds{
+      background: #fff;
+      height: 100%;
+    }
+    .footer-stone{
+      height: 610px;
+      top: auto;
+      bottom: 0px;
+      transform:  translate3d(-50%, 100%, 0); // hiding on load
+    }
   }
   article{
     text-align: center;
     .header{
-      z-index: 2;
-      position: absolute;
       left: 50%;
+      position: absolute;
       transform:  translate3d(-50%, 0, 0);
+      z-index: 2;
     }
     .summary{
       padding-top: 330px;
+    }
+    .gallery-wrapper{
+      overflow: hidden;
+      .gallery{
+        height: 600px;
+        margin: auto;
+        width: 795px;
+      }
+      .stripe-wrapper{
+        height: 100%;
+      }
+      .stripe{
+        display: inline-block;
+        height: 100%;
+        white-space: nowrap;
+      }
+      img{
+        display: inline-block;
+        height: 100%;
+      }
     }
     .payment{
       margin-top: -100px;
