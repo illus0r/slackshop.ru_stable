@@ -28,22 +28,13 @@
                 </g>
                 <g id="Payment" transform="translate(1079.063663, 172.381422)">
                     <g transform="translate(21.000000, 144.000000)">
-                        <g id="footer" transform="translate(0.000000, 243.630561)">
-                            <text id="Сайт-сделал-Иван-Дианов-в-Школе-стажёров" font-family="HelveticaNeue, Helvetica Neue" font-size="12.6316388" font-weight="normal" fill="#FFFFFF">
+                        <g id="footer" transform="translate(0.000000, 243.630561)" font-family="HelveticaNeue, Helvetica Neue" fill="#FFFFFF" font-weight="normal">
+                            <text id="Сайт-сделал-Иван-Дианов-в-Школе-стажёров" font-size="12.6316388">
                                 <tspan x="425.00178" y="14.7528147">Сайт сделал Иван Дианов в Школе стажёров</tspan>
                             </text>
-                            <text id="Оферта-курса" font-family="HelveticaNeue, Helvetica Neue" font-size="14.8608242" font-weight="normal" fill="#FFFFFF">
+                            <text id="Оферта-курса" font-size="14.8608242">
                                 <tspan x="0.0739684623" y="14.156336">Оферта курса</tspan>
                             </text>
-                            <path id="Stroke-358" stroke="#FFFFFF" d="M0.0741332027,23.2436731 L99.0600803,23.2436731 L0.0741332027,23.2436731 L0.0741332027,23.2436731 Z"></path>
-                            <text id="Школе-стажёров" font-family="HelveticaNeue, Helvetica Neue" font-size="12.6316388" font-weight="normal" fill="#FFFFFF">
-                                <tspan x="594.478518" y="14.7528147">Школе стажёров</tspan>
-                            </text>
-                            <path id="Stroke-359" stroke="#FFFFFF" d="M594.478683,21.1910041 L696.199322,21.1910041 L594.478683,21.1910041 L594.478683,21.1910041 Z"></path>
-                            <text id="Иван-Дианов" font-family="HelveticaNeue, Helvetica Neue" font-size="12.6316388" font-weight="normal" fill="#FFFFFF">
-                                <tspan x="502.828793" y="14.7528147">Иван Дианов</tspan>
-                            </text>
-                            <path id="Stroke-360" stroke="#FFFFFF" d="M502.828875,21.1910041 L580.525414,21.1910041 L502.828875,21.1910041 L502.828875,21.1910041 Z"></path>
                         </g>
                         <text id="во-«Вконтакте»" font-family="HelveticaNeue, Helvetica Neue" font-size="12.6316388" font-weight="normal" fill="#425A4D">
                             <tspan x="539.687904" y="100.183535">во «Вконтакте»</tspan>
