@@ -7,6 +7,7 @@ permalink: new/
   <meta charset="UTF-8">
   <title></title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
 </head>
@@ -16,6 +17,9 @@ permalink: new/
   <img src="/img/course/hills.svg" class="parallax hills">
   <img src="/img/course/forest1.svg" class="parallax forest1">
   <img src="/img/course/forest2.svg" class="parallax forest2">
+  <svg id="birds-div" class="parallax forest2" style="height: 100%">
+    <!--<img src="/img/course/birds.svg" id="birds-svg" class="parallax forest2">-->
+  </svg>
   <div class="parallax clouds"></div>
 </div>
 
@@ -81,6 +85,32 @@ permalink: new/
 window.onload = function () {
   var s = skrollr.init();
 }
+//Snap SVG
+//
+function RandomRect(maxX, maxY) {
+  return [Math.floor(Math.random() * maxX), Math.floor(Math.random() * maxY)];
+}
+
+function flight(g){
+    var rect = RandomRect(300, 30);
+    var duration = 10000 + Math.floor(Math.random() * 8000);
+    g.animate({ transform:'translate('+rect[0]+','+rect[1]+')'}, duration, mina.easeinout, flight.bind(null, g));
+    return g;
+}
+ 
+var s = Snap("#birds-div");
+Snap.load("/img/course/birds.svg", function (f) {
+    var birds = f.selectAll("path");
+    console.log(birds);
+    birds.forEach(function(bird){
+        var rect = RandomRect(300, 100);
+        bird.attr('transform','translate('+rect[0]+','+rect[1]+') scale('+Math.random()+')');
+        flight(bird);
+      });
+    var g = f.select("#site");
+    s.append(g);
+});
+
 </script>
 </body>
 </html>
