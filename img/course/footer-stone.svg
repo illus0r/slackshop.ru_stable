@@ -20,7 +20,7 @@
                         <path d="M1272.8893,294.3614 L1290.9743,247.2644 L1314.7113,237.8444 L1325.2613,276.6524 L1294.3653,290.5934 L1272.8893,294.3614 Z" id="Fill-346" fill="#1E2E33"></path>
                     </g>
                     <g id="footer" transform="translate(539.063663, 293.011983)" font-size="14.8608242" font-family="HelveticaNeue, Helvetica Neue" fill="#FFFFFF" font-weight="normal">
-                        <text id="Оферта-курса">
+                        <text id="Оферта-курса" text-decoration="underline">
                             <tspan x="0.0739684623" y="14.156336">Оферта курса</tspan>
                         </text>
                         <text id="Сайт-сделал-Иван-Диа">
