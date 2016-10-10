@@ -31,6 +31,9 @@
   }
   article{
     text-align: center;
+    section{
+      margin-bottom: 50px;
+    }
     .header{
       left: 50%;
       position: absolute;
@@ -75,9 +78,8 @@
       }
     }
     .payment{
-      margin-top: -100px;
-      overflow: hidden;
-      opacity: 0;
+      /*opacity: 0;*/
+      margin-bottom: 350px;
     }
   }
 }
