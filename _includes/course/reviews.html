@@ -1,0 +1,18 @@
+<section class="include-reviews">
+  <h2>Отзывы</h2>
+  {% for review in site.course_reviews %}
+  {% assign image_path = review.path | split:"/" | last | split:"." | first %}
+  {% assign image_path = image_path | prepend:"/img/reviews/" | append:".png" %}
+    <div class="review">
+      <!--<img src="{{ image_path }}" alt="{{ review.name }}">-->
+      <svg viewBox="0 0 226 229">
+        <mask id="mask" fill="white">
+            <path d="M17.309847,12.0278099 L1.54451339,180.535778 L11.398549,220.937847 L217.327018,229.806342 L212.400469,205.170592 L226.194433,63.2690465 L197.620819,1.1886416 L17.309847,12.0278099 Z"></path>
+        </mask>
+        <image shape-rendering="crispEdges" mask="url(#mask)" width="100%" height="100%" xlink:href="{{ image_path }}"></image>
+      </svg>
+      <p><a href="{{ review.link }}">{{ review.name }}</a></p>
+      {{ review.content | markdownify }}
+    </div>
+  {% endfor %}
+</section>

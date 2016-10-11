@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Sports-World';
+    src:url('/assets/fonts/Sports-World.ttf.woff') format('woff'),
+        url('/assets/fonts/Sports-World.ttf.svg#Sports-World') format('svg'),
+        url('/assets/fonts/Sports-World.ttf.eot'),
+        url('/assets/fonts/Sports-World.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+.font-accident{
+  font-family: $font-family-accident;
+  line-height: 1.3em;
+}
+.font-base{
+  font-family: $font-family-base;
+}
+body{
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: 17px;
+}
+h1, h2{
+  @extend .font-accident;
+}
+h2{
+  font-size: 2.9em;
+  margin-bottom: 0.6em;
+}
+p{
+  margin-bottom: 0.6em;
+}
+strong{
+  font-weight: bold;
+}
+.large{
+  font-size: 18.2px;
+  line-height: 1.3em;
+  margin-bottom: 6px;
+}
+a{
+  border-bottom: 1px solid rgba( $color-link, .3 );
+  color: $color-link;
+  text-decoration: none;
+  &:visited{
+    $color-link-visited: darken($color-link, 10);
+    border-bottom: 1px solid rgba( $color-link-visited, .3 );
+    color: $color-link-visited;
+  }
+  &:active, &:hover{
+    $color-link-active: lighten($color-link, 20);
+    border-bottom: 1px solid rgba( $color-link-active, .3 );
+    color: $color-link-active;
+  }
+}

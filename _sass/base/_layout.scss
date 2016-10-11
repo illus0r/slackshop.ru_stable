@@ -1,5 +1,21 @@
+$susy: (
+  container: 790px,
+  columns: 6,
+  gutters: 1/5,
+  /*column-width: 122px,*/
+  /*math: static,*/
+  /*gutter-position: split,*/
+  global-box-sizing: border-box,
+  debug: (
+    image: hide,
+    output: background,
+  )
+);
+
 html{
   position: relative;
 }
 body{
+  @include container();
+  @include clearfix;
 }

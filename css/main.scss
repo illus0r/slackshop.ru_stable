@@ -3,7 +3,20 @@
 @charset "utf-8";
 
 // Import partials from the `minima` theme.
-@import "helper/reset",
+@import 
+        "base/vars", // first line
+        "helper/reset", // before other styles
+        "helper/mixins", // before other styles
+        /*[>"../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss",<]*/
+        /*[>"bower_components/neat/app/assets/stylesheets/_neat.scss",<]*/
+        "../bower_components/susy/sass/susy",
         "base/typo",
         "base/layout",
+        "components/button",
+        "includes/nav",
+        "includes/course/header",
+        "includes/course/summary",
+        "includes/course/reviews",
+        "includes/course/enroll-form",
+        "includes/footer",
         "layouts/course";

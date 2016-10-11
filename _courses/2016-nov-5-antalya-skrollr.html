@@ -1,35 +1,19 @@
 ---
 permalink: new/
+dates: 5-12 ноября
+place: Турция, Анталия
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
-</head>
-<body class="layout-course">
-<div class="parallax-container parallax-container-back">
-  <img src="/img/course/sky.svg" class="parallax sky">
-  <img src="/img/course/hills.svg" class="parallax hills">
-  <img src="/img/course/forest1.svg" class="parallax forest1">
-  <svg id="birds-div" class="parallax forest1" style="height: 100%"></svg>
-  <img src="/img/course/forest2.svg" class="parallax forest2">
-  <div class="parallax clouds"></div>
-</div>
 
-<article id="skrollr-body">
-<section class="header">    <img src="/img/course/header.png" alt=""></section>
-<section class="summary">   <img src="/img/course/summary.png" alt=""></section>
+{% include course/header.html %}
+{% include course/summary.html dates=page.dates place=page.place %}
 <section class="instructor">
   <img src="/img/course/instructor.png" alt="">
   <div class="emerge emerge-skill"></div>
   <div class="emerge emerge-avatar"></div>
 </section>
+{% include course/instructor.html %}
 <section class="place">     <img src="/img/course/place.png" alt=""></section>
+{% include course/place.html %}
 <section class="gallery-wrapper">
   <div class="gallery">
     <div class="stripe-wrapper">
@@ -39,81 +23,9 @@ permalink: new/
     </div>
   </div>
 </section>
+{% include course/gallery.html %}
 <section class="faq">       <img src="/img/course/faq.png" alt=""></section>
-<section class="reviews">   <img src="/img/course/reviews.png" alt=""></section>
+{% include course/faq.html %}
+{% include course/reviews.html %}
 <section class="payment">   <img src="/img/course/payment.png" alt=""></section>
-</article>
-
-<div class="parallax-container parallax-container-front">
-  <img src="/img/course/rocks.svg" class="parallax rocks">
-  <img src="/img/course/rocks2.svg" class="parallax rocks2">
-  <img src="/img/course/footer-stone.svg" class="parallax footer-stone">
-</div>
-
-<article>
-</article>
-
-<script>
-//var rocks = $(".parallax.rocks");
-//function repeatOften() {
-//  console.log(window.scrollY);
-//  rocks.css("transform","translate3d(-50%," + window.scrollY + "px,0)");
-//  requestAnimationFrame(repeatOften);
-//  //.toFixed(2)
-//}
-//repeatOften();
-
-
- // window.addEventListener("scroll", function(event){
-
- // 	var top = this.pageYOffset;
-
- // 	var layers = document.getElementsByClassName("parallax");
- // 	var layer, speed, yPos;
- // 	for (var i = 0; i < layers.length; i++) {
- // 		layer = layers[i];
- // 		speed = layer.getAttribute('data-speed');
- // 		var yPos = -(top * speed / 100);
- // 		layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-
- // 	}
- // });
-
-</script>
-<script type="text/javascript" src="/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>
-<!--<script type="text/javascript" src="/bower_components/skrollr-colors/dist/skroll-colors.min.js"></script>-->
-<script type="text/javascript" src="/bower_components/skrollr/dist/skrollr.min.js"></script>
-<script type="text/javascript">
-window.onload = function () {
-  var s = skrollr.init();
-}
-//Snap SVG
-//
-function RandomRect(maxX, maxY) {
-  return [Math.floor(Math.random() * maxX), Math.floor(Math.random() * maxY)];
-}
-
-function flight(g){
-    var rect = RandomRect(300, 30);
-    var duration = 10000 + Math.floor(Math.random() * 8000);
-    g.animate({ transform:'translate('+rect[0]+','+rect[1]+')'}, duration, mina.easeinout, flight.bind(null, g));
-    return g;
-}
- 
-var s = Snap("#birds-div");
-Snap.load("/img/course/birds.svg", function (f) {
-    var birds = f.selectAll("path");
-    console.log(birds);
-    birds.forEach(function(bird){
-        var rect = RandomRect(300, 100);
-        bird.attr('transform','translate('+rect[0]+','+rect[1]+') scale('+Math.random()+')');
-        flight(bird);
-      });
-    var g = f.select("#site");
-    s.append(g);
-});
-
-</script>
-</body>
-</html>
-
+{% include course/payment.html %}

@@ -1,0 +1,36 @@
+/*$susy: (*/
+  /*flow: ltr,*/
+  /*math: fluid,*/
+  /*output: float,*/
+  /*gutter-position: after,*/
+  /*container: auto,*/
+  /*container-position: center,*/
+  /*columns: 4,*/
+  /*gutters: .25,*/
+  /*column-width: false,*/
+  /*global-box-sizing: content-box,*/
+  /*last-flow: to,*/
+  /*debug: (*/
+    /*image: hide,*/
+    /*color: rgba(#66f, .25),*/
+    /*output: background,*/
+    /*toggle: top right,*/
+  /*),*/
+  /*use-custom: (*/
+    /*background-image: true,*/
+    /*background-options: false,*/
+    /*box-sizing: true,*/
+    /*clearfix: false,*/
+    /*rem: true,*/
+  /*)*/
+/*);*/
+$color-accent: #FF604D;
+$color-link: #446252;
+$color-font: #333333;
+
+$font-size-base: 14px;
+
+$font-family-base: "Helvetica","Arial",sans-serif;
+$font-family-accident: "Sports-World", $font-family-base;
+
+$parallax-width: 3334px;

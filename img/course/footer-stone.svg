@@ -34,8 +34,8 @@
                         <g id="input" transform="translate(0.000000, 82.000000)">
                             <path d="M0.571649363,44.3008093 L411,44.3008093 L411,0.467919884 L0.571649363,0.467919884 L0.571649363,44.3008093 Z" id="Fill-349" fill="#FFFFFF"></path>
                             <path d="M411,44.2299623 L662.643393,44.2299623 L662.643393,0.468743687 L411,0.468743687 L411,44.2299623 Z" id="Fill-351" fill="#FF604D"></path>
-                            <text id="your@mail.com" font-family="HelveticaNeue, Helvetica Neue" font-size="14.8608242" font-weight="normal" fill="#000000">
-                                <tspan x="12" y="28">your@mail.com</tspan>
+                            <text id="your@mail.com" stroke="#979797" font-family="Helvetica" font-size="18.1937907" font-weight="normal" fill="#000000">
+                                <tspan x="10" y="27">your@mail.com</tspan>
                             </text>
                             <text id="Узнать-о-наличии-мес" font-family="Helvetica" font-size="18.194" font-weight="normal" fill="#FFFFFF">
                                 <tspan x="437.654521" y="27">Узнать о наличии мест </tspan>

@@ -2,11 +2,14 @@
   .parallax-container{
     bottom: 0;
     left: 100px;
+    /*pointer-events: none; //TODO uncomment*/
     position: fixed;
     right: 100px;
     top: 0;
     &.parallax-container-back{
       z-index: -1;
+    }
+    &.parallax-container-front{
     }
     .parallax{
       height: auto;
@@ -14,7 +17,7 @@
       position: absolute;
       top: 0;
       transform: translate3d(-50%,0,0);
-      width: 3334px;
+      width: $parallax-width;
     }
     .rocks{
     }
@@ -23,16 +26,20 @@
       height: 100%;
     }
     .footer-stone{
+      bottom: 0px;
       height: 610px;
       top: auto;
-      bottom: 0px;
       transform:  translate3d(-50%, 100%, 0); // hiding on load
+      width: $parallax-width;
     }
   }
   article{
-    text-align: center;
     section{
+      @include clearfix;
+      display: block;
       margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .header{
       left: 50%;
@@ -59,11 +66,13 @@
       /*}*/
     }
     .gallery-wrapper{
+      margin: 0 -500px;
       overflow: hidden;
+      padding: 0 500px;
       .gallery{
+        /*width: 795px;*/
         height: 600px;
         margin: auto;
-        width: 795px;
       }
       .stripe-wrapper{
         height: 100%;

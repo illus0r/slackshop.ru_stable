@@ -1,0 +1,29 @@
+.include-header{
+  margin-bottom: 73px;
+  h1{
+    font-family: $font-family-base;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-accent;
+    .main{
+      font-family: $font-family-accident;
+      display: block;
+      font-size: 10.2em;
+    }
+    .begining, .ending{
+      font-size: 2.1em;
+      letter-spacing: 0.12em;
+    }
+    .begining{
+      float: left;
+      margin-bottom: 5px;
+    }
+    .ending{
+      float: right;
+      margin-top: -10px;
+    }
+    .digit{
+      font-size: 1.1em;
+    }
+  }
+}
