@@ -36,10 +36,10 @@
                                 <path d="M0.571649363,44.3008093 L411,44.3008093 L411,0.467919884 L0.571649363,0.467919884 L0.571649363,44.3008093 Z" id="Fill-349" fill="#FFFFFF"></path>
                                 <path d="M411,44.2299623 L662.643393,44.2299623 L662.643393,0.468743687 L411,0.468743687 L411,44.2299623 Z" id="Fill-351" fill="#FF604D"></path>
                                 <text id="your@mail.com" stroke="#979797" font-family="Helvetica" font-size="17" font-weight="normal" line-spacing="20" fill="#000000">
-                                    <tspan x="10" y="26">your@mail.com</tspan>
+                                    <tspan x="10" y="28">your@mail.com</tspan>
                                 </text>
                                 <text id="Узнать-о-наличии-мес" font-family="Helvetica" font-size="17" font-weight="normal" line-spacing="20" fill="#FFFFFF">
-                                    <tspan x="444.141357" y="28">Узнать о наличии мест </tspan>
+                                    <tspan x="444.641357" y="28">Узнать о наличии мест </tspan>
                                 </text>
                                 <text id="Или-спросите" font-family="HelveticaNeue, Helvetica Neue" font-size="17" font-weight="normal" line-spacing="20" text-decoration="underline" fill="#FFFFFF">
                                     <tspan x="683" y="17.5863381">Или спросите</tspan>

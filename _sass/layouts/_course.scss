@@ -9,13 +9,13 @@
       z-index: -1;
     }
     .parallax{
+      /*pointer-event: none;*/
       height: auto;
       left: 50%;
       position: absolute;
       top: 0;
       transform: translate3d(-50%,0,0);
       width: 3334px;
-      /*pointer-event: none;*/
     }
     .rocks{
     }
@@ -24,10 +24,11 @@
       height: 100%;
     }
     .footer-stone{
+      bottom: 0px;
       height: 610px;
       top: auto;
-      bottom: 0px;
       transform:  translate3d(-50%, 100%, 0); // hiding on load
+      width: 3000px;
     }
   }
   article{
@@ -43,6 +44,9 @@
     }
     .summary{
       padding-top: 455px;
+    }
+    .pic{
+      margin-bottom: 10px;
     }
     .instructor{
       /*margin-bottom: -10px;*/
@@ -81,7 +85,7 @@
     }
     .payment{
       /*opacity: 0;*/
-      margin-bottom: 350px;
+      margin-bottom: 400px;
     }
   }
 }
