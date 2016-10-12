@@ -5,8 +5,8 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="site" transform="translate(0.000000, -3616.000000)">
-            <g id="FooterStone" transform="translate(0.000000, 3616.000000)">
+        <g id="site" transform="translate(0.000000, -5451.000000)">
+            <g id="FooterStone" transform="translate(0.000000, 5451.000000)">
                 <g transform="translate(561.000000, 277.000000)">
                     <g id="stone" transform="translate(1103.344359, 376.797060) rotate(-3.000000) translate(-1103.344359, -376.797060) translate(15.844359, 57.297060)">
                         <path d="M823.3794,165.7602 L464.3724,166.2162 L358.6474,176.5142 L141.2894,184.9042 L128.2654,192.2842 L0.0004,434.0912 L24.7504,518.5062 L118.9124,562.0122 L627.4234,538.2632 L1218.1414,494.1122 L1692.1824,638.7392 L1737.9254,617.9372 L1859.2544,576.9432 L1896.6784,572.6672 L1967.6564,546.4232 L2087.5974,461.3272 L2174.6904,315.3052 L2149.6084,290.5362 L1961.8604,256.9452 L1450.9224,168.4702 L1441.0634,171.1032 L1432.0154,164.4172 L1024.8564,109.0762 L823.3794,165.7602 Z" id="Fill-1" fill="#213136"></path>
@@ -34,15 +34,15 @@
                         <g id="input" transform="translate(0.000000, 82.000000)">
                             <path d="M0.571649363,44.3008093 L411,44.3008093 L411,0.467919884 L0.571649363,0.467919884 L0.571649363,44.3008093 Z" id="Fill-349" fill="#FFFFFF"></path>
                             <path d="M411,44.2299623 L662.643393,44.2299623 L662.643393,0.468743687 L411,0.468743687 L411,44.2299623 Z" id="Fill-351" fill="#FF604D"></path>
-                            <text id="your@mail.com" font-family="HelveticaNeue, Helvetica Neue" font-size="14.8608242" font-weight="normal" fill="#000000">
-                                <tspan x="12" y="28">your@mail.com</tspan>
+                            <text id="your@mail.com" stroke="#979797" font-family="Helvetica" font-size="17" font-weight="normal" line-spacing="20" fill="#000000">
+                                <tspan x="10" y="26">your@mail.com</tspan>
                             </text>
-                            <text id="Узнать-о-наличии-мес" font-family="Helvetica" font-size="18.194" font-weight="normal" fill="#FFFFFF">
-                                <tspan x="437.654521" y="27">Узнать о наличии мест </tspan>
+                            <text id="Узнать-о-наличии-мес" font-family="Helvetica" font-size="17" font-weight="normal" line-spacing="20" fill="#FFFFFF">
+                                <tspan x="444.141357" y="28">Узнать о наличии мест </tspan>
                             </text>
-                            <text id="Или-спросите" font-family="HelveticaNeue, Helvetica Neue" font-size="14.8608242" font-weight="normal" text-decoration="underline" fill="#FFFFFF">
-                                <tspan x="683" y="18.5863381">Или спросите</tspan>
-                                <tspan x="683" y="36.0024394" font-size="14.861">во «Вконтакте»</tspan>
+                            <text id="Или-спросите" font-family="HelveticaNeue, Helvetica Neue" font-size="17" font-weight="normal" line-spacing="20" text-decoration="underline" fill="#FFFFFF">
+                                <tspan x="683" y="17.5863381">Или спросите</tspan>
+                                <tspan x="683" y="37.5863381">во «Вконтакте»</tspan>
                             </text>
                         </g>
                     </g>
