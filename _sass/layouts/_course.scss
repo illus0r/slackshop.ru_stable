@@ -12,6 +12,7 @@
     &.parallax-container-front{
     }
     .parallax{
+      /*pointer-event: none;*/
       height: auto;
       left: 50%;
       position: absolute;
@@ -30,14 +31,15 @@
       height: 610px;
       top: auto;
       transform:  translate3d(-50%, 100%, 0); // hiding on load
-      width: $parallax-width;
+      /*width: $parallax-width;*/
+      width: 3000px;
     }
   }
   article{
     section{
       @include clearfix;
       display: block;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -48,10 +50,13 @@
       z-index: 2;
     }
     .summary{
-      padding-top: 330px;
+      padding-top: 455px;
+    }
+    .pic{
+      margin-bottom: 10px;
     }
     .instructor{
-      margin-bottom: -10px;
+      /*margin-bottom: -10px;*/
       /*.emerge{*/
         /*background: #000;*/
         /*width: 500px;*/
@@ -89,7 +94,7 @@
     }
     .payment{
       /*opacity: 0;*/
-      margin-bottom: 350px;
+      margin-bottom: 400px;
     }
   }
 }

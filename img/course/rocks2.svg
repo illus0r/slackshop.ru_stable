@@ -12,34 +12,36 @@
         <path id="path-11" d="M2892.91954,2185.86017 L1879.9629,2216.55988 L2278.47056,1384.48185 L2302.85301,1334.44668 L2319.92136,1244.6405 L2371.12535,1121.47792 L2400.38493,1080.42353 L2388.1937,1041.93533 L2383.31764,979.070948 L2361.37216,935.450947 L2356.4961,894.396565 L2312.60621,768.668358 L2444.27482,718.633192 L2497.91685,687.842963 L2590.57164,714.784204 L2692.97962,744.29218 L2719.80116,744.29218 L2795.3876,762.253193 L2892.91952,789.195549 L2951.43867,808.439372 L2978.26021,932.885326 L2980.69824,958.544315 L3027.02511,1070.15994 L3027.02511,1108.6487 L2980.69822,1220.97228 L2980.69822,1354.10534 L3027.02508,1468.94626 L2892.91954,2185.86017 Z"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="site" transform="translate(0.000000, 2.000000)">
-            <g id="Rocks2" transform="translate(0.000000, -2.000000)">
-                <g transform="translate(0.000000, 699.000000)">
-                    <path d="M600.264072,913.311814 L563.911385,843.644216 L509.382021,804.266966 L470,758.83178 L530.588034,619.496584 L560.882051,474.103454 L582.087394,395.348283 L627.528754,359 L745.518728,377.098786 L892.174836,424.631207 L928.840371,414.767972 L981.967613,513.480704 L966.820269,610.409681 L1000.14362,755.802812 L888.056227,1028.4146 L600.264072,913.311814 Z" id="Fill-11-Copy" fill="#4D6F6E"></path>
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <use id="Mask" fill="#3F605F" xlink:href="#path-1"></use>
-                    <mask id="mask-4" fill="white">
-                        <use xlink:href="#path-3"></use>
-                    </mask>
-                    <use id="Mask" fill="#4A6C6B" transform="translate(791.682187, 986.205445) rotate(46.000000) translate(-791.682187, -986.205445) " xlink:href="#path-3"></use>
-                    <mask id="mask-6" fill="white">
-                        <use xlink:href="#path-5"></use>
-                    </mask>
-                    <use id="Mask-Copy" fill="#7D9690" xlink:href="#path-5"></use>
-                    <mask id="mask-8" fill="white">
-                        <use xlink:href="#path-7"></use>
-                    </mask>
-                    <use id="Mask" fill="#3C595A" xlink:href="#path-7"></use>
-                    <mask id="mask-10" fill="white">
-                        <use xlink:href="#path-9"></use>
-                    </mask>
-                    <use id="Mask" fill="#708A84" xlink:href="#path-9"></use>
-                    <mask id="mask-12" fill="white">
-                        <use xlink:href="#path-11"></use>
-                    </mask>
-                    <use id="Mask" fill="#708A84" transform="translate(2453.494006, 1452.201422) scale(-1, 1) translate(-2453.494006, -1452.201422) " xlink:href="#path-11"></use>
+        <g id="site" transform="translate(0.000000, -593.000000)">
+            <g id="art" transform="translate(-670.000000, -955.000000)">
+                <g id="Rocks2" transform="translate(670.000000, 1548.000000)">
+                    <g transform="translate(0.000000, 699.000000)">
+                        <path d="M600.264072,913.311814 L563.911385,843.644216 L509.382021,804.266966 L470,758.83178 L530.588034,619.496584 L560.882051,474.103454 L582.087394,395.348283 L627.528754,359 L745.518728,377.098786 L892.174836,424.631207 L928.840371,414.767972 L981.967613,513.480704 L966.820269,610.409681 L1000.14362,755.802812 L888.056227,1028.4146 L600.264072,913.311814 Z" id="Fill-11-Copy" fill="#4D6F6E"></path>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#3F605F" xlink:href="#path-1"></use>
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask" fill="#4A6C6B" transform="translate(791.682187, 986.205445) rotate(46.000000) translate(-791.682187, -986.205445) " xlink:href="#path-3"></use>
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Mask-Copy" fill="#7D9690" xlink:href="#path-5"></use>
+                        <mask id="mask-8" fill="white">
+                            <use xlink:href="#path-7"></use>
+                        </mask>
+                        <use id="Mask" fill="#3C595A" xlink:href="#path-7"></use>
+                        <mask id="mask-10" fill="white">
+                            <use xlink:href="#path-9"></use>
+                        </mask>
+                        <use id="Mask" fill="#708A84" xlink:href="#path-9"></use>
+                        <mask id="mask-12" fill="white">
+                            <use xlink:href="#path-11"></use>
+                        </mask>
+                        <use id="Mask" fill="#708A84" transform="translate(2453.494006, 1452.201422) scale(-1, 1) translate(-2453.494006, -1452.201422) " xlink:href="#path-11"></use>
+                    </g>
                 </g>
             </g>
         </g>
