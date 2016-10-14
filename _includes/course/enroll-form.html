@@ -1,7 +1,13 @@
 <div class="include-enroll-form">
-  your@mail.com
-  Узнать о наличии мест
+  <img class="background" src="/img/course/footer-stone.png">
   
-  Или спросите
-  во «Вконтакте»
+  <div class="content">
+    <form action="https://formspree.io/{{ site.email }}" method="POST">
+      <input type="email" placeholder="your@mail.ru" name="_replyto"><button>Узнать о наличии мест</button>
+    </form>
+    
+    <div class="vk">
+      <a href="{{ site.vk }}">Или спросите во&nbsp;«Вконтакте»</a>
+    </div>
+  </div>
 </div>

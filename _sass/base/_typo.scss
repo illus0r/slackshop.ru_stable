@@ -65,17 +65,13 @@ strong{
   }
 }
 a{
-  border-bottom: 1px solid rgba( $color-link, .3 );
-  color: $color-link;
-  text-decoration: none;
+  @include underlined-link($color-link);
   &:visited{
     $color-link-visited: darken($color-link, 10);
-    border-bottom: 1px solid rgba( $color-link-visited, .3 );
-    color: $color-link-visited;
+    @include underlined-link($color-link-visited);
   }
   &:active, &:hover{
     $color-link-active: lighten($color-link, 20);
-    border-bottom: 1px solid rgba( $color-link-active, .3 );
-    color: $color-link-active;
+    @include underlined-link($color-link-active);
   }
 }

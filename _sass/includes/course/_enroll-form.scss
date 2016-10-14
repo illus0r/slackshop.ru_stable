@@ -1,2 +1,54 @@
 .include-enroll-form{
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  .content{
+    @include container;
+  }
+  img.background{
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform:  translate3d(-50%, 0, 0);
+    width: 3000px;
+    z-index: -1;
+  }
+  form{
+    @include span(5);
+    display: inline-block;
+    background: yellow;
+    $w: 40%;
+    input, button{
+      $h: 44px;
+      -webkit-appearance: none;
+      border: none;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: $font-size-base;
+      height: $h;
+      line-height: $h;
+      padding: 0;
+      vertical-align: top;
+    }
+    input{
+      padding: 0 10px;
+      width: 100% - $w;
+    }
+    button{
+      /*float: right;*/
+      background: $color-accent;
+      color: white;
+      margin-right: -100px;
+      padding: 0 30px;
+      width: $w;
+    }
+  }
+  .vk{
+    @include span(1 last);
+    @extend .small;
+    display: inline-block;
+    a{
+      @include underlined-link(white);
+    }
+  }
 }
