@@ -1,6 +1,6 @@
 .include-payment{
   @include clearfix;
-  margin-bottom: 400px;
+  margin-bottom: 350px;
   .col1, .col2, .col3{
     @include span(2);
   }
@@ -14,5 +14,28 @@
   }
   .content{
     margin-top: -1.2em; // fix it. Ideally margins of float elements should collapse
+  }
+  .discount{
+    background: url(../img/course/discount.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    height: 180px;
+    margin: 10px -20px;
+    /*@include mask(2);*/
+    /*$margin: 32px;*/
+    /*background: $color-accent;*/
+    /*color: white;*/
+    /*height: 300px;*/
+    /*p{*/
+      /*padding: $margin;*/
+    /*}*/
+    /*.value{*/
+      /*display: block;*/
+      /*font-family: $font-family-accident;*/
+      /*font-size: 3.5em;*/
+      /*line-height: 1em;*/
+      /*margin-bottom: 2px;*/
+      /*margin-top: -6px;*/
+      /*margin: -$margin;*/
+    /*}*/
   }
 }

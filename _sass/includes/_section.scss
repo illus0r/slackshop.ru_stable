@@ -8,11 +8,14 @@
     @include span(2 last);
     margin-top: 10px;
     img{
-      @include mask(1);
+      @include mask(2);
       width: 100%;
+      margin-right: -10px;
     }
     .caption{
       @extend .small;
+      /*padding: 0 10px;*/
+      /*text-align: center;*/
       p{
         margin: 0;
       }
@@ -25,6 +28,10 @@
     .image{
       @include pull(6);
       float: left;
+      img{
+        margin-right: 0;
+        margin-left: -10px;
+      }
     }
   }
 }

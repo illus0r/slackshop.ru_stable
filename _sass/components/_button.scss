@@ -5,7 +5,8 @@
   color: white;
   display: inline-block;
   margin-bottom: 0;
-  padding: 7px 20px 8px;
+  padding: 9px 10px 10px;
+  text-align: center;
   &:hover{
     background: lighten($color-accent, 10);
   }

@@ -1,30 +1,31 @@
 .include-enroll-form{
   /*position: relative;*/
   /*width: 100%;*/
-  @include container;
   bottom: 0;
   left: 0;
+  overflow-x: hidden;
   position: absolute;
   right: 0;
   .content{
-    /*@include container;*/
-    margin-bottom: 89px;
     @include clearfix;
+    @include container;
+    margin-bottom: 120px;
+    margin-top: 140px;
   }
   img.background{
+    /*width: 3000px;*/
     bottom: 0;
     left: 50%;
     position: absolute;
     transform:  translate3d(-50%, 0, 0);
-    /*width: 3000px;*/
     z-index: -1;
   }
   form{
     $w: 40%;
+    /*vertical-align: middle;*/
     @include span(5);
     background: yellow;
     display: inline-block;
-    /*vertical-align: middle;*/
     input, button{
       $h: 44px;
       -webkit-appearance: none;

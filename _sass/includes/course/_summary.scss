@@ -11,9 +11,9 @@
     .btn-wrapper{
       @include span(2 last);
       margin-bottom: 14px;
-      text-align: center;
+      /*text-align: center;*/
       .btn{
-        width: 100%;
+        width: 95%;
         box-sizing: border-box;
       }
     }
