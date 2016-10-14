@@ -17,9 +17,10 @@
   }
   .discount{
     background: url(../img/course/discount.png) 0 0 no-repeat;
+    background-size: 100%;
     text-indent: -9999px;
     height: 180px;
-    margin: 10px -20px;
+    margin: 10px 0px;
     /*@include mask(2);*/
     /*$margin: 32px;*/
     /*background: $color-accent;*/
