@@ -1,0 +1,23 @@
+.include-footer{
+  @extend .small;
+  @include clearfix;
+  @include container;
+  bottom: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  .col{
+    @include span(3);
+    color: silver;
+    p{
+      margin: 0;
+    }
+    a{
+      @include underlined-link(white);
+    }
+    &:last-child{
+      @include last;
+      text-align: right;
+    }
+  }
+}
