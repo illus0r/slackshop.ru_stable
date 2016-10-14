@@ -4,13 +4,14 @@
     &:last-child{
       @include last;
     }
-    /*img{*/
-      /*width: 100%;*/
-    /*}*/
-    svg{
-      margin-left: -10px;
-      margin-bottom: 10px;
+    img{
+      width: 100%;
+      @include mask(1);
     }
+    /*svg{*/
+      /*margin-left: -10px;*/
+      /*margin-bottom: 10px;*/
+    /*}*/
     a{
       font-weight: bold;
     }

@@ -4,29 +4,118 @@ dates: 5-12 ноября
 place: Турция, Анталия
 ---
 
-{% include course/header.html %}
-{% include course/summary.html dates=page.dates place=page.place %}
-<section class="instructor">  <img src="/img/course/instructor.png" alt=""></section>
-{% include course/instructor.html %}
-<section class="pic">     <img src="/img/course/pic1.png" alt=""></section>
-<section class="place">     <img src="/img/course/place.png" alt=""></section>
-{% include course/place.html %}
-<section class="pic">     <img src="/img/course/pic2.png" alt=""></section>
-<!--<section class="gallery-wrapper">-->
-  <!--<div class="gallery">-->
-    <!--<div class="stripe-wrapper">-->
-      <!--<div class="stripe">-->
-        <!--<img src="/img/course/place1.jpg" alt=""><img src="/img/course/place2.jpg" alt=""><img src="/img/course/place3.jpg" alt="">-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</section>-->
-<!--{% include course/gallery.html %}-->
-<section class="ready">       <img src="/img/course/ready.png" alt=""></section>
-<section class="pic">     <img src="/img/course/pic3.png" alt=""></section>
-<section class="eat">       <img src="/img/course/eat.png" alt=""></section>
-<section class="pic">     <img src="/img/course/pic1.png" alt=""></section>
-<section class="reviews">   <img src="/img/course/reviews.png" alt=""></section>
+{% comment %}
+Header
+{% endcomment %}
+{% include course/header.html dates=page.dates place=page.place %}
+
+
+{% comment %}
+Summary
+{% endcomment %}
+{% assign description = "
+Хайлайн — хождение по ленте на большой высоте. Научим натягивать хайлайн и ходить по нему. Расскажем, как рассчитать нагрузку, какое снаряжение выбрать, каких ошибок избежать.
+" %}
+{% assign audience_groups = "" | split:"" %}
+{% assign audience_groups = audience_groups | push:"
+**Новички**, которые только вчера встали на стропу, прокачают теорию и практику, получат заряд мотивации для дальнейшего обучения.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Слэклайнеры**, которые проходят  20-метровые линии, сделают первые шаги на головокружительной высоте.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Хайлайнеры** отточат мастерство, обменяются опытом и привезут домой крутые фотографии.
+" %}
+{% include course/summary.html description=description audience_groups=audience_groups %}
+
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html image="/img/course/2016-nov-5-antalya/matvey.jpg" caption="Матвей на горе Монте Пиана в Италии. Три километра над уровнем моря" %}
+
+
+{% comment %}
+Instructor
+{% endcomment %}
+{% include section.html text="
+Инструктор
+---
+Хожу хайлайны 7 лет. За это время организовал 10 хайлайн-проектов в России, Норвегии, Турции, Греции, Италии, Испании, Франции.
+
+Участвовал в международных слэклайн фестивалях «Highline meeting Monte Piana» и «This rocks», чтобы пообщаться с лучшими хайлайнерами и узнать больше о мировых новинках слэклайна и о безопасной навеске линий.
+
+Я альпинист с первым спортивный разрядом. Если участники курса захотят, найдём время на скалолазанье.
+" image="/img/course/instructor-matvey.png" caption="Матвей Орликов"%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html image="/img/course/2016-nov-5-antalya/matvey.jpg" caption="Матвей на горе Монте Пиана в Италии. Три километра над уровнем моря" %}
+
+
+{% comment %}
+Place
+{% endcomment %}
+{% include section.html text="
+Место
+---
+Курс пройдёт в Гейкбаири — крупнейшем скалолазном районе Турции, недалеко от Анталии. Здесь трижды проходил турецкий карнавал хайлайна, пробито 15 линий от 10 до 100 метров.
+
+Остановимся в кемпинге [Josito](http://www.josito.de/), до линий будем ходить пешком.
+" 
+image="/img/course/map-josito.png" 
+caption="[Гугль карта](https://www.google.ru/maps/place/Josito/@36.7559135,30.4724542,16361a,20y,39.63t/data=!3m1!1e3!4m5!3m4!1s0x0:0x4fc115d46626e9b1!8m2!3d36.8735714!4d30.4829678)"
+image_position="right"
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html image="/img/course/2016-nov-5-antalya/geyikbayiri.jpg" caption="Матвей на горе Монте Пиана в Италии. Три километра над уровнем моря" %}
+
+
+{% comment %}
+Preparation
+{% endcomment %}
+{% include section.html text="
+Физподготовка
+---
+Если вы хотите ускорить обучение, потренеруйтесь заранее: научитесь вставать на высоко натянутой стропе без помощи опоры, ходить по 20-метровому слэклайну. Вылезать на стропу после срыва будет проще, если вы можете 5 раз подтянуться и 5 раз поднять прямые ноги в висе.
+
+Эти умения не обязательны. В любом случае вы попробуете ходить на высоте и получите стимул для дальнейшего развития. В лагере будет слэклайн для тренировок. Если что-то плохо получается, отработаем технику на нём.
+" image="/img/course/preparation.png" caption="[Видеоурок: как встать на слэклайне](https://www.youtube.com/watch?time_continue=143&v=rpnLZ1_WrKE)"%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html image="/img/course/2016-nov-5-antalya/geyikbayiri.jpg" caption="Матвей на горе Монте Пиана в Италии. Три километра над уровнем моря" %}
+
+
+{% comment %}
+Food
+{% endcomment %}
+{% include section.html text="
+Eда
+---
+Мы организуем трёхразовое питание, еду готовим сами. В кемпинге есть газовые плиты. Еду и овощи вскладчину купим в местном супермаркете и на рынке.
+
+Если вы вегетарианец, предупредите нас за 3 дня до начала курса. При закупке продуктов учтём ваши предпочтения.
+" 
+image="/img/course/food.png" 
+caption="[Видеоурок: как встать на слэклайне](https://www.youtube.com/watch?time_continue=143&v=rpnLZ1_WrKE)"
+image_position="right"
+%}
+
+
+{% comment %}
+Reviews
+{% endcomment %}
 {% include course/reviews.html %}
-<section class="payment">   <img src="/img/course/payment.png" alt=""></section>
+<!--<section class="payment">   <img src="/img/course/payment.png" alt=""></section>-->
+
 {% include course/payment.html %}

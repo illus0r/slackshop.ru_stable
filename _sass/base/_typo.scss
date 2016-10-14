@@ -1,9 +1,10 @@
 @font-face {
     font-family: 'Sports-World';
-    src:url('/assets/fonts/Sports-World.ttf.woff') format('woff'),
-        url('/assets/fonts/Sports-World.ttf.svg#Sports-World') format('svg'),
-        url('/assets/fonts/Sports-World.ttf.eot'),
-        url('/assets/fonts/Sports-World.ttf.eot?#iefix') format('embedded-opentype'); 
+    src:url('/assets/fonts/yo.woff') format('woff');
+    /*src:url('/assets/fonts/Sports-World.ttf.woff') format('woff'),*/
+        /*url('/assets/fonts/Sports-World.ttf.svg#Sports-World') format('svg'),*/
+        /*url('/assets/fonts/Sports-World.ttf.eot'),*/
+        /*url('/assets/fonts/Sports-World.ttf.eot?#iefix') format('embedded-opentype'); */
     font-weight: normal;
     font-style: normal;
 }
@@ -17,14 +18,33 @@
 body{
   font-size: $font-size-base;
   font-family: $font-family-base;
-  line-height: 17px;
+  line-height: 1.19;
+  /*position: relative; //todo remove*/
+  /*&:after{ //todo remove*/
+    /*background: #000;*/
+    /*bottom: 0;*/
+    /*content: " ";*/
+    /*display: block !important;*/
+    /*left: 0;*/
+    /*opacity: 0.1;*/
+    /*pointer-events: none;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*z-index: 100;*/
+  /*}*/
 }
 h1, h2{
   @extend .font-accident;
 }
 h2{
-  font-size: 2.9em;
+  font-size: 2.45em;
+  margin-bottom: 0.45em;
+}
+h3{
+  font-weight: bold;
   margin-bottom: 0.6em;
+  margin-top: 1.2em;
 }
 p{
   margin-bottom: 0.6em;
@@ -32,10 +52,17 @@ p{
 strong{
   font-weight: bold;
 }
-.large{
-  font-size: 18.2px;
+/*.large{*/
+  /*font-size: 18.2px;*/
+  /*line-height: 1.3em;*/
+  /*margin-bottom: 6px;*/
+/*}*/
+.small{
+  font-size: 0.76em;
   line-height: 1.3em;
-  margin-bottom: 6px;
+  p{
+    margin-bottom: 1.23em;
+  }
 }
 a{
   border-bottom: 1px solid rgba( $color-link, .3 );

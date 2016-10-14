@@ -1,0 +1,18 @@
+.include-payment{
+  @include clearfix;
+  margin-bottom: 400px;
+  .col1, .col2, .col3{
+    @include span(2);
+  }
+  .col3{
+    @include last;
+  }
+  svg{
+    margin-left: -15px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .content{
+    margin-top: -1.2em; // fix it. Ideally margins of float elements should collapse
+  }
+}

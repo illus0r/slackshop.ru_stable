@@ -1,0 +1,30 @@
+.include-section{
+  @include clearfix;
+  margin-bottom: 70px;
+  .text{
+    @include span(4);
+  }
+  .image{
+    @include span(2 last);
+    margin-top: 10px;
+    img{
+      @include mask(1);
+      width: 100%;
+    }
+    .caption{
+      @extend .small;
+      p{
+        margin: 0;
+      }
+    }
+  }
+  &.image-position-right{
+    .text{
+      @include push(2);
+    }
+    .image{
+      @include pull(6);
+      float: left;
+    }
+  }
+}

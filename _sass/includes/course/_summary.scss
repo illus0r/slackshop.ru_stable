@@ -1,26 +1,21 @@
 .include-summary{
   .enroll{
-    margin-bottom: 24px;
-      display: flex;
-    .info{
-      @extend .font-accident;
-      @extend h2;
+    @include clearfix;
+    margin-bottom: 25px;
+    .description{
       @include span(4);
-      align-self: flex-end;
-      margin-bottom: 0;
+      p{
+        /*@extend .large;*/
+      }
     }
     .btn-wrapper{
       @include span(2 last);
-      align-self: flex-end;
-      text-align: right;
       margin-bottom: 14px;
-    }
-  }
-  .description{
-    @include span(4);
-    margin-bottom: 46px;
-    p{
-      @extend .large;
+      text-align: center;
+      .btn{
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   }
   .audience-groups{

@@ -1,4 +1,5 @@
 url: "http://slackshop.ru"
+descriptor: "Производим и продаём слэклайны, <br>учим по ним ходить"
 
 # Build settings
 markdown: kramdown
