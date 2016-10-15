@@ -18,7 +18,7 @@
 body{
   font-size: $font-size-base;
   font-family: $font-family-base;
-  line-height: 1.19;
+  line-height: $line-height;
   /*position: relative; //todo remove*/
   /*&:after{ //todo remove*/
     /*background: #000;*/

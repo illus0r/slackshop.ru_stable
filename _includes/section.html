@@ -1,4 +1,4 @@
-<div class="include-section{% if include.image_position == 'right' %} image-position-right{% endif %}">
+<div class="include-section{% if include.mask %} mask{{ include.mask }}{% endif %}{% if include.image_position == 'right' %} image-position-right{% endif %}">
   <div class="text">
       {% assign content_html = include.text | markdownify %}
       {% include typograph.html content=content_html %}

@@ -6,10 +6,13 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>-->
+  <script src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
+  <link rel="stylesheet" href="/bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 </head>
 <body>
 
@@ -17,5 +20,29 @@
 {{ content }}
 
 {% include statistics.html %}
+
+<script type="text/javascript" src="/bower_components/fancybox/source/jquery.fancybox.js"></script>
+<script>
+$(document).ready(function() {
+  $("a.iframe").click(function() {
+    $.fancybox({
+      'padding'       : 0,
+      'autoScale'     : false,
+      'transitionIn'  : 'none',
+      'transitionOut' : 'none',
+      'title'         : this.title,
+      //'width'     : 680,
+      //'height'        : 495,
+      'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+      'type'          : 'swf',
+      //'swf'           : {
+      //'wmode'        : 'transparent',
+      //'allowfullscreen'   : 'true'
+      //}
+    });
+    return false;
+  });
+});
+</script>
 </body>
 </html>

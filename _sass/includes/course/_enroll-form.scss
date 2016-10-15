@@ -24,7 +24,6 @@
     $w: 40%;
     /*vertical-align: middle;*/
     @include span(5);
-    background: yellow;
     display: inline-block;
     input, button{
       $h: 44px;
@@ -51,6 +50,24 @@
       padding: 0 30px;
       white-space: nowrap;
       width: $w;
+    }
+    .enroll-form-status{
+      color: white;
+      margin-bottom: -0.5em - $line-height;
+      margin-top: 0.5em;
+      a, a:hover{
+        color: white;
+      }
+      p{
+        margin-bottom: 0;
+      }
+      &.error{
+        color: $color-accent;
+        a, a:hover{
+          color: $color-accent;
+          border-bottom-color: rgba($color-accent, 0.6);
+        }
+      }
     }
   }
   .vk{

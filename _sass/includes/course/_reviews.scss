@@ -5,8 +5,9 @@
       @include last;
     }
     img{
+      @include mask(3);
+      margin-left: -10px;
       width: 100%;
-      @include mask(1);
     }
     /*svg{*/
       /*margin-left: -10px;*/
@@ -17,6 +18,12 @@
     }
     p:last-child{
       margin-bottom: 0;
+    }
+    &:nth-child(2) img{
+      @include mask(5);
+    }
+    &:nth-child(3) img{
+      @include mask(4);
     }
   }
 }

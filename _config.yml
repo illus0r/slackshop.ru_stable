@@ -3,6 +3,7 @@ descriptor1: "Команда"
 descriptor2: "проводит курс"
 email: mail@mail.ru #TODO #yourname@inbox.ru
 vk: https://vk.com/orl1kov
+phone: "+7 903 780-35-25"
 
 # Build settings
 markdown: kramdown

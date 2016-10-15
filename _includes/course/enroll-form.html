@@ -2,8 +2,10 @@
   <img class="background" src="/img/course/footer-stone.svg">
   
   <div class="content">
-    <form action="https://formspree.io/{{ site.email }}" method="POST">
-      <input type="email" placeholder="your@mail.ru" name="_replyto"><button>Узнать о наличии мест</button>
+    <a name="enroll-form"></a>
+    <form id="enroll-form" action="https://formspree.io/{{ site.email }}" method="POST">
+      <input type="email" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto"><button>Узнать о наличии мест</button>
+      <div class="enroll-form-status" style="display: none;"></div>
     </form>
     
     <div class="vk">
@@ -11,3 +13,27 @@
     </div>
   </div>
 </div>
+<script>
+  var $contactForm = $('#enroll-form');
+  $contactForm.submit(function(e) {
+  	e.preventDefault();
+  	$.ajax({
+      url: '//formspree.io/{{ site.email }}',
+  		method: 'POST',
+  		data: $(this).serialize(),
+  		dataType: 'json',
+  		beforeSend: function() {
+        $contactForm.find('.enroll-form-status').show();
+        $contactForm.find('.enroll-form-status').removeClass("error");
+        $contactForm.find('.enroll-form-status').html("<p>Отправляем...</p>");
+  		},
+  		success: function(data) {
+        $contactForm.find('.enroll-form-status').html("<p>Мы получили вашу почту. Скоро напишем!</p>");
+  		},
+        error: function(err) {
+        $contactForm.find('.enroll-form-status').addClass("error");
+        $contactForm.find('.enroll-form-status').html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+  		}
+  	});
+  });
+</script>
