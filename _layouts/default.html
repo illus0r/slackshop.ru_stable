@@ -5,7 +5,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  {% if page.title %}
+    <title>{{ page.title }}</title>
+  {% endif %}
   <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>-->
@@ -13,6 +15,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
   <link rel="stylesheet" href="/bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 </head>
 <body>
 
