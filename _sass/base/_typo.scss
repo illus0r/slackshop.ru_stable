@@ -75,3 +75,8 @@ a{
     @include underlined-link($color-link-active);
   }
 }
+em.quotation-mark{
+  margin-left: -0.4em;
+  display: inline-block;
+  font-style: normal;
+}

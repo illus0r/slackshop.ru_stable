@@ -3,6 +3,7 @@
   margin-bottom: 70px;
   .text{
     @include span(4);
+    line-height: $line-height-large;
   }
   .image{
     @include span(2 last);

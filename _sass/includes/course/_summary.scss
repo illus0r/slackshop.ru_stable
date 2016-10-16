@@ -6,6 +6,7 @@
       @include span(4);
       p{
         /*@extend .large;*/
+        line-height: $line-height-large;
       }
     }
     .btn-wrapper{
