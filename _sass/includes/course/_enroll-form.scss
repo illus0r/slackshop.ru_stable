@@ -1,15 +1,21 @@
 .include-enroll-form{
   /*position: relative;*/
   /*width: 100%;*/
+  $input-height: 44px;
+  $btn-submit-width: 40%;
   bottom: 0;
+  color: white;
   left: 0;
   overflow-x: hidden;
   position: absolute;
   right: 0;
+  a, a:hover{
+    color: white;
+  }
   .content{
     @include clearfix;
     @include container;
-    margin-bottom: 120px;
+    height: 170px;
     margin-top: 140px;
   }
   img.background{
@@ -20,26 +26,27 @@
     transform:  translate3d(-50%, 0, 0);
     z-index: -1;
   }
-  form{
-    $w: 40%;
-    /*vertical-align: middle;*/
+  .enroll-form-wrapper{
     @include span(5);
+  }
+  form{
+    /*vertical-align: middle;*/
     display: inline-block;
+    width: 100%;
     input, button{
-      $h: 44px;
       -webkit-appearance: none;
       /*vertical-align: top;*/
       border: none;
       box-sizing: border-box;
       display: inline-block;
       font-size: $font-size-base;
-      height: $h;
-      line-height: $h;
+      height: $input-height;
+      line-height: $input-height;
       padding: 0;
     }
     input{
       padding: 0 10px;
-      width: 100% - $w;
+      width: 100% - $btn-submit-width;
     }
     button{
       /*float: right;*/
@@ -49,15 +56,11 @@
       margin-right: -100px;
       padding: 0 30px;
       white-space: nowrap;
-      width: $w;
+      width: $btn-submit-width;
     }
     .enroll-form-status{
-      color: white;
       margin-bottom: -0.5em - $line-height;
       margin-top: 0.5em;
-      a, a:hover{
-        color: white;
-      }
       p{
         margin-bottom: 0;
       }
@@ -68,6 +71,19 @@
           border-bottom-color: rgba($color-accent, 0.6);
         }
       }
+    }
+  }
+  .success{
+    *{
+      display: inline-block;
+    }
+    .btn{
+      @include span(2);
+      /*width: $btn-submit-width;*/
+    }
+    p{
+      @include span(3);
+      margin-top: 4px;
     }
   }
   .vk{

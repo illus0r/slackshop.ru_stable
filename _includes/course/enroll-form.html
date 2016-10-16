@@ -3,10 +3,16 @@
   
   <div class="content">
     <a name="enroll-form"></a>
-    <form id="enroll-form" action="https://formspree.io/{{ site.email }}" method="POST">
-      <input type="email" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto"><button>Узнать о наличии мест</button>
-      <div class="enroll-form-status" style="display: none;"></div>
-    </form>
+    <div class="enroll-form-wrapper">
+      <form id="enroll-form" action="https://formspree.io/{{ site.email }}" method="POST">
+        <input type="email" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto"><button>Узнать о наличии мест</button>
+        <div class="enroll-form-status" style="display: none;"></div>
+      </form>
+      <div class="success" style="display: none;">
+        <a class="btn">Отправить ещё раз</a>
+        <p>Мы получили вашу почту.<br>Скоро напишем!</p>
+      </div>
+    </div>
     
     <div class="vk">
       <a href="{{ site.vk }}">Или спросите во&nbsp;«Вконтакте»</a>
@@ -14,8 +20,29 @@
   </div>
 </div>
 <script>
-  var $contactForm = $('#enroll-form');
-  $contactForm.submit(function(e) {
+  var $form = $('#enroll-form');
+  var $formStatus = $form.find('.enroll-form-status');
+  var $formSuccess = $('.include-enroll-form .success');
+  var duration = 100;
+
+  function switchStatus(isDone){
+    if(isDone){
+      $form.fadeOut(duration, function(){
+        $formSuccess.fadeIn(duration);
+      });
+    }
+    else{
+      $formStatus.hide();
+      $formSuccess.fadeOut(duration, function(){
+        $form.fadeIn(duration);
+      });
+    }
+  }
+  $formSuccess.find('.btn').click(function(){
+        switchStatus(false);
+      });
+
+  $form.submit(function(e) {
   	e.preventDefault();
   	$.ajax({
       url: '//formspree.io/{{ site.email }}',
@@ -23,16 +50,16 @@
   		data: $(this).serialize(),
   		dataType: 'json',
   		beforeSend: function() {
-        $contactForm.find('.enroll-form-status').show();
-        $contactForm.find('.enroll-form-status').removeClass("error");
-        $contactForm.find('.enroll-form-status').html("<p>Отправляем...</p>");
+        $formStatus.show();
+        $formStatus.removeClass("error");
+        $formStatus.html("<p>Отправляем...</p>");
   		},
   		success: function(data) {
-        $contactForm.find('.enroll-form-status').html("<p>Мы получили вашу почту. Скоро напишем!</p>");
+        switchStatus(true);
   		},
         error: function(err) {
-        $contactForm.find('.enroll-form-status').addClass("error");
-        $contactForm.find('.enroll-form-status').html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+        $formStatus.addClass("error");
+        $formStatus.html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
   		}
   	});
   });
