@@ -60,12 +60,10 @@
   		},
   		success: function(data) {
         switchStatus(true);
-        alert(JSON.stringify(data));
   		},
       error: function(err) {
         $formStatus.addClass("error");
         $formStatus.html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
-        alert(JSON.stringify(err));
   		}
   	});
   });
