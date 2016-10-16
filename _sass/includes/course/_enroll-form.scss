@@ -1,8 +1,8 @@
 .include-enroll-form{
+  $btn-submit-width: 40%;
+  $input-height: 44px;
   /*position: relative;*/
   /*width: 100%;*/
-  $input-height: 44px;
-  $btn-submit-width: 40%;
   bottom: 0;
   color: white;
   left: 0;
@@ -41,7 +41,7 @@
       display: inline-block;
       font-size: $font-size-base;
       height: $input-height;
-      line-height: $input-height;
+      /*line-height: $input-height;*/
       padding: 0;
     }
     input{
@@ -51,6 +51,7 @@
     button{
       /*float: right;*/
       background: $color-accent;
+      border-radius: 0;
       color: white;
       cursor: pointer;
       margin-right: -100px;
@@ -67,8 +68,8 @@
       &.error{
         color: $color-accent;
         a, a:hover{
-          color: $color-accent;
           border-bottom-color: rgba($color-accent, 0.6);
+          color: $color-accent;
         }
       }
     }
@@ -78,8 +79,8 @@
       display: inline-block;
     }
     .btn{
-      @include span(2);
       /*width: $btn-submit-width;*/
+      @include span(2);
     }
     p{
       @include span(3);

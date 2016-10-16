@@ -8,7 +8,9 @@
   right: 0;
   .col{
     @include span(3);
-    color: silver;
+    /*color: silver;*/
+    color: #999999;
+    /*opacity: 0.5;*/
     p{
       margin: 0;
     }

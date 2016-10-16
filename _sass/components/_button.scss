@@ -7,6 +7,9 @@
   margin-bottom: 0;
   padding: 14px 10px 14px;
   text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
   &:hover{
     background: lighten($color-accent, 10);
   }

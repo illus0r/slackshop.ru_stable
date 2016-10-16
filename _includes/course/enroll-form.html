@@ -4,8 +4,8 @@
   <div class="content">
     <a name="enroll-form"></a>
     <div class="enroll-form-wrapper">
-      <form id="enroll-form" action="https://formspree.io/{{ site.email }}" method="POST">
-        <input type="email" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto" required><button>Узнать о наличии мест</button>
+      <form id="enroll-form">
+        <input type="text" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto" id="enroll-form-email" required><button class="btn">Узнать о наличии мест</button>
         <div class="enroll-form-status" style="display: none;"></div>
       </form>
       <div class="success" style="display: none;">
@@ -39,15 +39,19 @@
     }
   }
   $formSuccess.find('.btn').click(function(){
-        switchStatus(false);
-      });
+    switchStatus(false);
+  });
 
   $form.submit(function(e) {
   	e.preventDefault();
+    var email = $('#enroll-form-email').val();
   	$.ajax({
-      url: '//formspree.io/{{ site.email }}',
+      url: 'https://formspree.io/{{ site.email }}',
   		method: 'POST',
-  		data: $(this).serialize(),
+      data: {
+        _replyto: email,
+        email: email,
+      },
   		dataType: 'json',
   		beforeSend: function() {
         $formStatus.show();
@@ -56,10 +60,12 @@
   		},
   		success: function(data) {
         switchStatus(true);
+        alert(JSON.stringify(data));
   		},
-        error: function(err) {
+      error: function(err) {
         $formStatus.addClass("error");
         $formStatus.html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+        alert(JSON.stringify(err));
   		}
   	});
   });
