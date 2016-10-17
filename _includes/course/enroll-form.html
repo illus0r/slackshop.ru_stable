@@ -5,7 +5,7 @@
     <a name="enroll-form"></a>
     <div class="enroll-form-wrapper">
       <form id="enroll-form">
-        <input type="text" id="enroll-form-email" placeholder="your@mail.ru" name="_replyto" id="enroll-form-email" required><button class="btn">Узнать о наличии мест</button>
+        <input type="text" placeholder="your@mail.ru" name="_replyto" id="enroll-form-email"><button class="btn">Узнать о наличии мест</button>
         <div class="enroll-form-status" style="display: none;"></div>
       </form>
       <div class="success" style="display: none;">
@@ -24,8 +24,10 @@
   var $formStatus = $form.find('.enroll-form-status');
   var $formSuccess = $('.include-enroll-form .success');
   var duration = 100;
+  var attempts = 0;
 
   function switchStatus(isDone){
+    //animates form status changes
     if(isDone){
       $form.fadeOut(duration, function(){
         $formSuccess.fadeIn(duration);
@@ -38,33 +40,61 @@
       });
     }
   }
+
+  function shakeForm(){
+    $form.addClass("shake");
+    setTimeout(function(){
+      $form.removeClass("shake");
+    },1000);
+  };
+
+  // Back to initial state
   $formSuccess.find('.btn').click(function(){
     switchStatus(false);
   });
 
   $form.submit(function(e) {
   	e.preventDefault();
+    console.log(1);
     var email = $('#enroll-form-email').val();
-  	$.ajax({
-      url: 'https://formspree.io/{{ site.email }}',
-  		method: 'POST',
-      data: {
-        _replyto: email,
-        email: email,
-      },
-  		dataType: 'json',
-  		beforeSend: function() {
-        $formStatus.show();
-        $formStatus.removeClass("error");
-        $formStatus.html("<p>Отправляем...</p>");
-  		},
-  		success: function(data) {
-        switchStatus(true);
-  		},
-      error: function(err) {
-        $formStatus.addClass("error");
-        $formStatus.html("<p>Ой, не получилось. Не сдавайтесь! Напишите на почту: <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
-  		}
-  	});
+    // regex from http://emailregex.com/
+    var filter = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+    if (filter.test(email)) {
+      $.ajax({
+        url: 'https://formspree.io/{{ site.email }}',
+        method: 'POST',
+        data: {
+          _replyto: email,
+          email: email,
+        },
+        dataType: 'json',
+        beforeSend: function() {
+          $formStatus.show();
+          $formStatus.removeClass("error");
+          $formStatus.html("<p>Отправляем...</p>");
+        },
+        success: function(data) {
+          switchStatus(true);
+        },
+        error: function(err) {
+          $formStatus.addClass("error");
+          $formStatus.html("<p>Ой, не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+          shakeForm();
+        }
+      });
+    }
+    else {
+      $formStatus.addClass("error");
+      $formStatus.show();
+      if(attempts < 1){
+        $formStatus.html("<p>Ой, кажется почта неправильная. Попробуйте ещё раз.</p>");
+      }else{
+        $formStatus.html("<p>Опять не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+      }
+      attempts += 1;
+      $form.find('#enroll-form-email').focus();
+      shakeForm();
+    }
+
   });
 </script>

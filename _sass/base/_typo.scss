@@ -71,9 +71,9 @@ a{
     @include underlined-link($color-link-visited);
   }
   &:active, &:hover{
-    opacity: 0.5;
-    /*$color-link-active: lighten($color-link, 20);*/
-    /*@include underlined-link($color-link-active);*/
+    /*opacity: 0.5;*/
+    $color-link-active: $color-accent;
+    @include underlined-link($color-link-active);
   }
 }
 em.quotation-mark{

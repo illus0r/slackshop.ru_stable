@@ -16,6 +16,9 @@
     text-indent: -9999px;
     vertical-align: bottom;
     width: 170px;
+    &:hover{
+      background-image: url(/assets/img/logo-hover.svg);
+    }
   }
   .descriptor{
     /*@extend .small;*/

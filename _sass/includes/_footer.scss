@@ -6,17 +6,18 @@
   left: 0;
   position: absolute;
   right: 0;
+  color: silver;
+  a{
+    @include underlined-link(white);
+    &:hover{
+      @include underlined-link($color-accent);
+    }
+  }
+  p{
+    margin: 0;
+  }
   .col{
     @include span(3);
-    /*color: silver;*/
-    color: #999999;
-    /*opacity: 0.5;*/
-    p{
-      margin: 0;
-    }
-    a{
-      @include underlined-link(white);
-    }
     &:last-child{
       @include last;
       text-align: right;

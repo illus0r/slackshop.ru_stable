@@ -12,6 +12,6 @@
   border-radius: 2px;
   &:hover{
     opacity: 1;
-    background: lighten($color-accent, 10);
+    background: darken($color-accent, 5);
   }
 }
