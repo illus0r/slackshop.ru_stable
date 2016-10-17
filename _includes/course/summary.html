@@ -19,10 +19,14 @@
 </section>
 <script>
 $("#scroll-to-form").click(function(){
+  $form = $("#enroll-form");
+  $form.css({opacity: 0.01, top: 20});
   $('html, body').animate({
-      scrollTop: $("#enroll-form").offset().top
-    }, 1000, function(){
-    $('#enroll-form-email').focus();
-  });
+    scrollTop: $form.offset().top
+  }, 1000, "swing", function(){
+    $form.animate({opacity: 1, top: 0}, 500, function(){
+        $('#enroll-form-email').focus();
+      });
+  }, 50);
 });
 </script>

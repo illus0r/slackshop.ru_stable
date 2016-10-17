@@ -32,21 +32,36 @@
   form{
     /*vertical-align: middle;*/
     display: inline-block;
+    position: relative;
     width: 100%;
+    &:focus{
+      opacity: 0.5;
+    }
     input, button{
       -webkit-appearance: none;
+      /*line-height: $input-height;*/
       /*vertical-align: top;*/
       border: none;
       box-sizing: border-box;
       display: inline-block;
       font-size: $font-size-base;
       height: $input-height;
-      /*line-height: $input-height;*/
       padding: 0;
     }
     input{
-      padding: 0 10px;
+      $outline-width: 3px;
+      border-right-width: 0;
+      border: $outline-width solid transparent;
+      padding: 0 8px;
+      transition: border-color 300ms;
       width: 100% - $btn-submit-width;
+      &:focus{
+        /*box-shadow: 0 0 10px yellow;*/
+        /*padding: 0 10px - $outline-width;*/
+        border-color: $color-accent;
+        border: $outline-width solid $color-accent;
+        outline: none !important;
+      }
     }
     button{
       /*float: right;*/
