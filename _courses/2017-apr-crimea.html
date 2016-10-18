@@ -1,0 +1,162 @@
+---
+permalink: crimea/
+dates: В апреле
+place: Крым, Россия
+title: "Курс «Хайлайн за 7 дней» в Крыму в апреле"
+---
+
+{% comment %}
+Header
+{% endcomment %}
+{% include course/header.html dates=page.dates place=page.place %}
+
+
+
+{% comment %}
+Summary
+{% endcomment %}
+{% assign description = "
+Хайлайн — хождение по ленте на большой высоте. Научим натягивать хайлайн и ходить по нему. Расскажем, как рассчитать нагрузку, какое снаряжение выбрать, каких ошибок избежать.
+" %}
+{% assign audience_groups = "" | split:"" %}
+{% assign audience_groups = audience_groups | push:"
+**Новички** прокачают теорию и практику, получат заряд мотивации для дальнейшего обучения.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Слэклайнеры**, которые проходят  20-метровые линии, сделают первые шаги на головокружительной высоте.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Хайлайнеры** отточат мастерство, обменяются опытом и привезут домой крутые фотографии.
+" %}
+{% include course/summary.html description=description audience_groups=audience_groups %}
+
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/matvey.jpg" 
+caption="Инструктор курса Матвей Орликов на горе Монте Пиана в Италии. Три километра над уровнем моря"
+%}
+
+
+{% comment %}
+Instructor
+{% endcomment %}
+{% include section.html text="
+Инструктор
+---
+*«*{:.quotation-mark}Хожу хайлайны 7 лет. За это время организовал 10 хайлайн-проектов в России, Норвегии, Турции, Греции, Италии, Испании, Франции. Участвовал в международных фестивалях „Хайлайн-митинг Монте Пиана“ в Италии и This rocks в Крыму.
+
+Ещё я альпинист с первым спортивным разрядом. Если участники курса захотят, найдём время на скалолазанье».
+" 
+image="/img/course/instructor-matvey.png" 
+caption="Матвей Орликов"%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/2.jpg" 
+mask=1
+caption="На Сфинксах две линии: десять и пятнадцать метров. C вами сделаем ещё одну" %}
+
+
+{% comment %}
+Preparation
+{% endcomment %}
+{% include section.html text="
+Физподготовка
+---
+Рядом с местом курса натянем низкий слэклайн для тренировок. Если что-то будет плохо получаться, отработаем технику на нём. 
+
+Но совсем без подготовки пройти по хайлайну не получится. Заранее потренируйтесь вставать на стропе без опоры и ходить по 20-метровому слэклайну. Вылезать на стропу после срыва будет проще, если вы можете пять раз подтянуться и пять раз поднять прямые ноги в висе.
+" 
+image="/img/course/preparation.jpg" 
+image_position="right"
+mask=4
+caption="[Видеоурок: как встать на слэклайне](https://www.youtube.com/watch?v=rpnLZ1_WrKE&autoplay=1){:.iframe}"
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/5.jpg" 
+mask=3
+caption="Матвей с участниками курса натягивают хайлайн" %}
+
+
+{% comment %}
+Food
+{% endcomment %}
+{% include section.html text="
+Eда
+---
+Мы скидываемся на еду. Покупаем в местном супермаркете и на рынке, готовим и едим вместе. В кемпинге есть газовые плиты.
+
+Если вы вегетарианец, предупредите нас за три дня.
+" 
+image="/img/course/food.png" 
+mask=3
+caption=""
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/1.jpg" 
+mask=1
+caption="Гейкбаири, сектор Анатолия. Внизу крыши кемпинга, в котором будем жить" %}
+
+
+{% comment %}
+Place
+{% endcomment %}
+{% include section.html text="
+Место
+---
+Место позволяет тянуть линии от 15 до 100+м, удобное расположение, рядом лес, где можно повесить тренировочные линии. По совокупности факторов оказалось выигрышно со всех сторон.
+
+Остановимся в кемпинге [Джосито](http://www.josito.de/), до линий будем ходить пешком.
+" 
+image="/img/course/map-josito.png" 
+mask=3
+caption="[Гугль-карта](https://www.google.ru/maps/place/Josito/@36.7559135,30.4724542,16361a,20y,39.63t/data=!3m1!1e3!4m5!3m4!1s0x0:0x4fc115d46626e9b1!8m2!3d36.8735714!4d30.4829678)"
+image_position="right"
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/camping.jpg" 
+mask=4
+caption="В кемпинг Джосито едут скалолазы со всего мира" %}
+
+
+{% comment %}
+Reviews
+{% endcomment %}
+{% include course/reviews.html %}
+
+{% comment %}
+Payment
+{% endcomment %}
+{% include course/payment.html %}
+
+{% comment %}
+Enroll form
+{% endcomment %}
+{% include course/enroll-form.html %}
+
+{% comment %}
+Footer
+{% endcomment %}
+{% include footer.html %}
