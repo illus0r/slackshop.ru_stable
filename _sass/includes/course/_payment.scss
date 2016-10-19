@@ -16,11 +16,16 @@
     margin-top: -1.2em; // fix it. Ideally margins of float elements should collapse
   }
   .discount{
-    background: url(../img/course/discount.png) 0 0 no-repeat;
+    // TODO rewrite
+    background: url(../img/course/2016-nov-5-antalya/discount.png) 0 0 no-repeat;
     background-size: 100%;
     text-indent: -9999px;
     height: 180px;
     margin: 20px 0 0 -20px;
+    &.crimea{
+      background: url(../img/course/2017-apr-crimea/discount.png) 0 0 no-repeat;
+      background-size: 100%;
+    }
     /*@include mask(2);*/
     /*$margin: 32px;*/
     /*background: $color-accent;*/

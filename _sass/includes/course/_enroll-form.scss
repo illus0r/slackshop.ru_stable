@@ -64,6 +64,9 @@
         border-color: $color-accent;
         border: $outline-width solid $color-accent;
       }
+      &[name="_gotcha"], &[type="hidden"]{
+        display: none;
+      }
     }
     button{
       /*float: right;*/
@@ -77,6 +80,7 @@
       width: $btn-submit-width;
     }
     .enroll-form-status{
+      display: none;
       margin-bottom: -0.5em - $line-height;
       margin-top: 0.5em;
       p{

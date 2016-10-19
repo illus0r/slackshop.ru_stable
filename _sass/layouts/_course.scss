@@ -19,6 +19,10 @@
       top: 0;
       transform: translate3d(-50%,0,0);
       width: $parallax-width;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      backface-visibility: hidden;
+      perspective: 1000;
     }
     .rocks{
     }

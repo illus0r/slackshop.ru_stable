@@ -1,67 +1,16 @@
 {% assign header = "Стоимость" %}
 
-{% assign p1 = "
-### Сам курс — 12 000 ₽
-
-Предоплата 5000 ₽. Отправьте заявку и мы пришлём номера карты Сбербанка и Яндекс&#x2011;Денег для оплаты.
-
-В стоимость курса не входят кемпинг, еда и проезд.
-" %}
-
-
-
-{% assign p2 = "
-### + 42 € на кемпинг
-
-Цены за 7 ночей:  
-42 €, если палатка своя.
-
-77 €, если арендованная. В комплекте — матрас и постельное бельё. Палатка двухместная.
-
-Бунгало от 70 € с человека. нужно забронировать его заранее на сайте кемпинга.
-
-Чтобы сэкономить, договоритесь с другим участником курса, что поселитесь в его палатке. А можете вскладчину арендовать палатку или бунгало. Напишите Матвею, он поможет это организовать.
-" %}
-
-
-
-{% assign p3 = "
-### + 4000 ₽ на еду
-
-Скидываемся по 4000 ₽. В конце курса вернём остаток.
-
-### + 300 ₽ на проезд
-
-Проезд на маршрутке от аэропорта до кемпинга стоит 150 ₽.
-
-Более дорогой и удобный вариант: кемпинг Джосито организует трансфер из аэропорта. Это 40 € за 1&#8209;4 человек. Заказать трансфер нужно за два дня.
-" %}
-
 <div class="include-payment">
   <h2>
       {% assign content_html = header | markdownify %}
       {% include typograph.html content=content_html %}
   </h2>
   <div class="content">
-    <div class="col1">
-      {% assign content_html = p1 | markdownify %}
-      {% include typograph.html content=content_html %}
-      <div class="discount">
-        Скидка
-        <span class="value">
-          1000 ₽
-        </span>
-        при предоплатe до 20 октября
+    {% for col in include.columns %}
+      <div class="col{{ forloop.index }}">
+        {% assign content_html = col | markdownify %}
+        {% include typograph.html content=content_html %}
       </div>
-    </div>
-    <div class="col2">
-      {% assign content_html = p2 | markdownify %}
-      {% include typograph.html content=content_html %}
-    </div>
-    <div class="col3">
-      {% assign content_html = p3 | markdownify %}
-      {% include typograph.html content=content_html %}
-    </div>
+    {% endfor %}
   </div>
 </div>
-

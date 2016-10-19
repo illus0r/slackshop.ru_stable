@@ -96,7 +96,7 @@ Food
 {% include section.html text="
 Eда
 ---
-Мы скидываемся на еду. Покупаем в местном супермаркете и на рынке, готовим и едим вместе. В кемпинге есть газовые плиты.
+Купим продукты в Метро и на рынке. В кемпинге есть плита, на ней будем готовить завтрак и ужин. А обед — около линий на газовой горелке.
 
 Если вы вегетарианец, предупредите нас за три дня.
 " 
@@ -112,7 +112,7 @@ Pic
 {% include picture.html 
 image="/img/course/2017-apr-crimea/1.jpg" 
 mask=1
-caption="Гейкбаири, сектор Анатолия. Внизу крыши кемпинга, в котором будем жить" %}
+caption="На Сфиксы поднимемся пешком, скалолазное снаряжение не потребуется" %}
 
 
 {% comment %}
@@ -121,13 +121,14 @@ Place
 {% include section.html text="
 Место
 ---
-Место позволяет тянуть линии от 15 до 100+м, удобное расположение, рядом лес, где можно повесить тренировочные линии. По совокупности факторов оказалось выигрышно со всех сторон.
 
-Остановимся в кемпинге [Джосито](http://www.josito.de/), до линий будем ходить пешком.
+Курс пройдёт на Сфинксах Каралезской долины. В лесу неподалёку повесим тренировочные линии.
+
+Остановимся в кемпинге [Сергея Черевко](https://vk.com/feed?section=search&q=%23BakchiCamp), там будет вайфай. До линий — 25 минут ходьбы.
 " 
-image="/img/course/map-josito.png" 
+image="/img/course/2017-apr-crimea/map-cherevko.png" 
 mask=3
-caption="[Гугль-карта](https://www.google.ru/maps/place/Josito/@36.7559135,30.4724542,16361a,20y,39.63t/data=!3m1!1e3!4m5!3m4!1s0x0:0x4fc115d46626e9b1!8m2!3d36.8735714!4d30.4829678)"
+caption="[Кемпинг на Гугль&#8209;карте](https://goo.gl/maps/yGEXWs8wLGG2)"
 image_position="right"
 %}
 
@@ -138,7 +139,7 @@ Pic
 {% include picture.html 
 image="/img/course/2017-apr-crimea/camping.jpg" 
 mask=4
-caption="В кемпинг Джосито едут скалолазы со всего мира" %}
+caption="Трёхместная типи в кемпинге Сергея Черевко" %}
 
 
 {% comment %}
@@ -146,15 +147,44 @@ Reviews
 {% endcomment %}
 {% include course/reviews.html %}
 
+
 {% comment %}
 Payment
 {% endcomment %}
-{% include course/payment.html %}
+{% assign columns = "" | split:"" %}
+{% assign columns = columns | push:"
+### Курс стоит 15 000 ₽
+
+Предоплата 5000 ₽. Отправьте заявку и мы пришлём номера карты Сбербанка и Яндекс&#x2011;Денег для оплаты.
+
+В стоимость курса входят еда и место в кемпинге.
+
+### + 1100 ₽ на проезд
+
+Проезд на маршрутке от аэропорта до Бахчисарая стоит 500 ₽. От Бахчисарая до кемпинга — 15 ₽.
+" %}
+{% assign columns = columns | push:"
+### + 2100 ₽ на палатку и спальник
+
+Арендовать в кемпинге двухместную палатку стоит 200 ₽, а спальник — 100&nbsp;₽&nbsp;за&nbsp;ночь.
+
+Чтобы сэкономить, договоритесь с другим участником курса, что поселитесь в его палатке. Или арендуйте вскладчину. Напишите Матвею, он поможет это организовать.
+" %}
+{% assign columns = columns | push:"
+<div class='discount crimea'>
+  Скидка
+  <span class='value'>
+    1000 ₽
+  </span>
+  при предоплатe до !!!!!!!!!20 октября
+</div>
+" %}
+{% include course/payment.html columns=columns %}
 
 {% comment %}
 Enroll form
 {% endcomment %}
-{% include course/enroll-form.html %}
+{% include course/enroll-form.html title=page.title %}
 
 {% comment %}
 Footer

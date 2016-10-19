@@ -1,5 +1,5 @@
 ---
-permalink: new/
+permalink: antalya/
 dates: 5-12 ноября
 place: Турция, Анталия
 title: "Курс «Хайлайн за 7 дней» 5-12 ноября в Анталии"
@@ -36,7 +36,7 @@ Summary
 Pic
 {% endcomment %}
 {% include picture.html 
-image="/img/course/2016-nov-5-antalya/matvey.jpg" 
+image="/img/course/matvey.jpg" 
 caption="Инструктор курса Матвей Орликов на горе Монте Пиана в Италии. Три километра над уровнем моря"
 %}
 
@@ -110,7 +110,7 @@ caption=""
 Pic
 {% endcomment %}
 {% include picture.html 
-image="/img/course/place3.jpg" 
+image="/img/course/2016-nov-5-antalya/place3.jpg" 
 mask=1
 caption="Гейкбаири, сектор Анатолия. Внизу крыши кемпинга, в котором будем жить" %}
 
@@ -125,7 +125,7 @@ Place
 
 Остановимся в кемпинге [Джосито](http://www.josito.de/), до линий будем ходить пешком.
 " 
-image="/img/course/map-josito.png" 
+image="/img/course/2016-nov-5-antalya/map-josito.png" 
 mask=3
 caption="[Гугль-карта](https://www.google.ru/maps/place/Josito/@36.7559135,30.4724542,16361a,20y,39.63t/data=!3m1!1e3!4m5!3m4!1s0x0:0x4fc115d46626e9b1!8m2!3d36.8735714!4d30.4829678)"
 image_position="right"
@@ -146,15 +146,55 @@ Reviews
 {% endcomment %}
 {% include course/reviews.html %}
 
+
 {% comment %}
 Payment
 {% endcomment %}
-{% include course/payment.html %}
+{% assign columns = "" | split:"" %}
+{% assign columns = columns | push:"
+### Сам курс — 12 000 ₽
+
+Предоплата 5000 ₽. Отправьте заявку и мы пришлём номера карты Сбербанка и Яндекс&#x2011;Денег для оплаты.
+
+В стоимость курса не входят кемпинг, еда и проезд.
+
+<div class='discount'>
+  Скидка
+  <span class='value'>
+    1000 ₽
+  </span>
+  при предоплатe до !!!!!!!!!20 октября
+</div>
+" %}
+{% assign columns = columns | push:"
+### + 42 € на кемпинг
+
+Цены за 7 ночей:  
+42 €, если палатка своя.
+
+77 €, если арендованная. В комплекте — матрас и постельное бельё. Палатка двухместная.
+
+Бунгало от 70 € с человека. нужно забронировать его заранее на сайте кемпинга.
+
+Чтобы сэкономить, договоритесь с другим участником курса, что поселитесь в его палатке. А можете вскладчину арендовать палатку или бунгало. Напишите Матвею, он поможет это организовать.
+" %}
+{% assign columns = columns | push:"
+### + 4000 ₽ на еду
+
+Скидываемся по 4000 ₽. В конце курса вернём остаток.
+
+### + 300 ₽ на проезд
+
+Проезд на маршрутке от аэропорта до кемпинга стоит 150 ₽.
+
+Более дорогой и удобный вариант: кемпинг Джосито организует трансфер из аэропорта. Это 40 € за 1&#8209;4 человек. Заказать трансфер нужно за два дня.
+" %}
+{% include course/payment.html columns=columns %}
 
 {% comment %}
 Enroll form
 {% endcomment %}
-{% include course/enroll-form.html %}
+{% include course/enroll-form.html title=page.title %}
 
 {% comment %}
 Footer

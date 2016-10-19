@@ -6,7 +6,10 @@
     <div class="enroll-form-wrapper">
       <form id="enroll-form">
         <input type="text" placeholder="your@mail.ru" name="_replyto" id="enroll-form-email"><button class="btn">Узнать о наличии мест</button>
-        <div class="enroll-form-status" style="display: none;"></div>
+        <input type="hidden" name="_subject" value="{{ include.title }} ({{ page.path | split:'/' | last }})" />
+        <input type="hidden" name="_format" value="plain" />
+        <input type="text" name="_gotcha" />
+        <div class="enroll-form-status"></div>
       </form>
       <div class="success" style="display: none;">
         <a class="btn">Добавить ещё адрес</a>
@@ -63,10 +66,7 @@
       $.ajax({
         url: 'https://formspree.io/{{ site.email }}',
         method: 'POST',
-        data: {
-          _replyto: email,
-          email: email,
-        },
+        data: $form.serialize(),
         dataType: 'json',
         beforeSend: function() {
           $formStatus.show();
