@@ -7,6 +7,9 @@ phone: "+7 903 780-35-25"
 
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-redirect-from
+  
 
 collections:
   courses:
