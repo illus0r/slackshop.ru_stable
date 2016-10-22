@@ -11,18 +11,22 @@
     &.parallax-container-front{
     }
     .parallax{
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
       /*pointer-event: none;*/
+      backface-visibility: hidden;
+      display: none;
       height: auto;
       left: 50%;
+      perspective: 1000;
       pointer-events: none; //TODO uncomment
       position: absolute;
       top: 0;
       transform: translate3d(-50%,0,0);
       width: $parallax-width;
-      -webkit-backface-visibility: hidden;
-      -webkit-perspective: 1000;
-      backface-visibility: hidden;
-      perspective: 1000;
+      @media (min-width: $width-tablet) {
+        display: block;
+      }
     }
     .rocks{
     }
