@@ -15,10 +15,25 @@
   <link rel="stylesheet" href="/css/scrollr.css" data-skrollr-stylesheet>
   <link rel="stylesheet" href="/bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  {% comment %}
+  {% if page.colors.accent %}
+    {% assign color = page.colors.accent %}
+    <style>
+      a:hover{
+        color: rgb({{ color }}) !important;
+        border-color: rgba({{ color }}, 0.3) !important;
+      }
+      .include-header *{
+        color: rgb({{ color }}) !important;
+      }
+    </style>
+  {% endif %}
+  {% endcomment %}
 </head>
 <body id="skrollr-body">
 
 {% include nav.html %}
+
 {{ content }}
 
 {% include statistics.html %}
@@ -33,14 +48,8 @@ $(document).ready(function() {
       'transitionIn'  : 'none',
       'transitionOut' : 'none',
       'title'         : this.title,
-      //'width'     : 680,
-      //'height'        : 495,
       'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
       'type'          : 'swf',
-      //'swf'           : {
-      //'wmode'        : 'transparent',
-      //'allowfullscreen'   : 'true'
-      //}
     });
     return false;
   });
