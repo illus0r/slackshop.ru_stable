@@ -1,22 +1,24 @@
 <nav class="include-nav">
-  <div class="descriptor">
-    {{ site.descriptor1 }}
+  <div class="line">
+    <div class="logo-wrapper">
+      <a href="{{ site.url }}" class="logo">
+        Slackshop
+      </a>
+    </div>
+    <span class="descriptor">
+      <span>
+        {{ site.descriptor }}
+      </span>
+    </span>
+    <span class="secondary">
+      {% for course in site.courses %}
+        {% assign link_text = course.dates | append:", " | append: course.place %}
+        {% if course.url == page.url %}
+          <span class="active">{{ link_text }}</span>
+          {% else %}
+          <span><a href="{{ course.url }}">{{ link_text }}</a></span>
+        {% endif %}
+      {% endfor %}
+    </span>
   </div>
-  <a href="{{ site.url }}" class="logo">
-    Slackshop
-  </a>
-  <div class="descriptor">
-    {{ site.descriptor2 }}
-  </div>
-  <!--<a class="active" href="#">-->
-    <!--Анталия 5—12 ноября-->
-  <!--</a>-->
-  <!--<div class="secondary">-->
-    <!--<a href="#">-->
-      <!--Планируемые события-->
-    <!--</a>-->
-    <!--<a href="#">-->
-      <!--Отчёты-->
-    <!--</a>-->
-  <!--</div>-->
 </nav>

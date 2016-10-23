@@ -3,7 +3,8 @@
   @include span(6);
   margin-bottom: 47px;
   margin-top: 20px;
-  text-align: center;
+  /*vertical-align: bottom;*/
+  /*text-align: center;*/
   .logo{
     /*margin-left: -20px;*/
     /*margin-right: 15px;*/
@@ -11,8 +12,8 @@
     background: url(/assets/img/logo.svg) 0 0 no-repeat;
     border: none;
     display: inline-block;
-    margin-right: -17px;
     height: $line-height;
+    margin-right: -17px;
     text-indent: -9999px;
     vertical-align: bottom;
     width: 170px;
@@ -20,28 +21,35 @@
       background-image: url(/assets/img/logo-hover.svg);
     }
   }
-  .descriptor{
-    /*@extend .small;*/
-    color: $color-link;
-    display: inline-block;
-    vertical-align: bottom;
+  .line{
+    display: table;
+    width: 100%;
+    &>*{
+      display: table-cell;
+    }
+    .logo-wrapper{
+      width: 156px;
+    }
+    .descriptor{
+      height: $line-height;
+      vertical-align: bottom;
+    }
+    .secondary{
+      @extend .small;
+      height: $line-height;
+      text-align: right;
+      vertical-align: bottom;
+      span{
+        display: inline-block;
+        margin: -5px 0;
+        padding: 5px 15px;
+        &:last-child{
+          margin-right: -15px;
+        }
+      }
+      span.active{
+        background: white;
+      }
+    }
   }
-  /*a{*/
-    /*[>vertical-align: baseline;<]*/
-    /*display: inline-block;*/
-    /*line-height: $line-height - 4;*/
-    /*margin-left: 30px;*/
-    /*&.active{*/
-      /*background: $color-link;*/
-      /*color: white;*/
-      /*margin-left: 0;*/
-      /*padding: 0 37px;*/
-      /*text-decoration: none;*/
-    /*}*/
-  /*}*/
-  /*.secondary{*/
-    /*display: inline-block;*/
-    /*text-align: right;*/
-    /*float: right;*/
-  /*}*/
 }

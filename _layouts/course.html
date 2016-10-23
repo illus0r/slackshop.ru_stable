@@ -1,17 +1,16 @@
 ---
 layout: default
 ---
-
 <div class="layout-course">
   <div class="parallax-container parallax-container-back">
-    <img src="/img/course/sky.svg" class="parallax sky">
-    <img src="/img/course/hills.svg" class="parallax hills">
-    <img src="/img/course/forest1.svg" class="parallax forest1">
+    <div id="sun-div" class="parallax sun"></div>
+    <div id="hills-div" class="parallax hills"></div>
+    <div id="forest1-div" class="parallax forest1"></div>
     <svg id="birds-div" class="parallax forest1" style="height: 100%"></svg>
-    <img src="/img/course/forest2.svg" class="parallax forest2">
+    <div id="forest2-div" class="parallax forest2"></div>
     <div class="parallax clouds"></div>
-    <img src="/img/course/rocks.svg" class="parallax rocks">
-    <img src="/img/course/rocks2.svg" class="parallax rocks2">
+    <div id="rocks-div" class="parallax rocks"></div>
+    <div id="rocks2-div" class="parallax rocks2"></div>
   </div>
   
   <article>
@@ -28,5 +27,14 @@ layout: default
 
   <script type="text/javascript" src="/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>
   <script type="text/javascript" src="/bower_components/skrollr/dist/skrollr.min.js"></script>
-  <script type="text/javascript" src="/js/course.js"></script>
+  <script type="text/javascript" src="/js/course-birds.js"></script>
+  <script type="text/javascript" src="/js/course-colorize.js" color-sun="{{ page.colors.sun }}" color-valley="{{ page.colors.valley }}" color-rocks="{{ page.colors.rocks }}" color-sky="{{ page.colors.sky }}"></script>
+  <script type="text/javascript" src="/js/course-skrollr.js"></script>
+  <script>
+  window.onload = function () {
+    birdsInit();
+    skrollrInit();
+    colorizeInit();
+  }
+  </script>
 </div>
