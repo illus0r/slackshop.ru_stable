@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<div class="layout-course">
+<div id="preloader"></div>
+<div class="layout-course" style="display: none;">
   <div class="parallax-container parallax-container-back">
     <div id="sun-div" class="parallax sun"></div>
     <div id="hills-div" class="parallax hills"></div>
@@ -32,8 +33,10 @@ layout: default
   <script type="text/javascript" src="/js/course-skrollr.js"></script>
   <script src="/bower_components/fittext/fittext.js"></script>
   <script>
+
+  $(document).ready(function() {
+  });
   window.onload = function () {
-    window.fitText( document.getElementById("header-responsive"), 0.54 );
     birdsInit();
     colorizeInit();
     if(!('ontouchstart' in window || navigator.maxTouchPoints)){
@@ -43,6 +46,9 @@ layout: default
         });
       });
     }
+    $('.layout-course').show();
+    window.fitText( document.getElementById("header-responsive"), 0.54 );
+    $('#preloader').hide();
   }
   </script>
 </div>
