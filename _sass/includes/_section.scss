@@ -2,16 +2,26 @@
   @include clearfix;
   margin-bottom: 70px;
   .text{
-    @include span(4);
+    @include span(6);
+    @media (min-width: $width-phone) {
+      @include span(4);
+    }
     line-height: $line-height-large;
   }
   .image{
-    @include span(2 last);
+    @include span(4);
+    margin-bottom: 20px;
     margin-top: 10px;
+    @media (min-width: $width-phone) {
+      @include span(2 last);
+      margin: 0;
+    }
     img{
       @include mask(2);
       width: 100%;
-      margin-right: -10px;
+      @media (min-width: $width-phone) {
+        margin-right: -10px;
+      }
     }
     .caption{
       @extend .small;
@@ -24,14 +34,20 @@
   }
   &.image-position-right{
     .text{
-      @include push(2);
+      @media (min-width: $width-phone) {
+        /*@include push(2);*/
+        @include last;
+      }
     }
     .image{
-      @include pull(6);
-      float: left;
-      img{
-        margin-right: 0;
-        margin-left: -10px;
+      @media (min-width: $width-phone) {
+        /*@include pull(6);*/
+        margin-right: gutter();
+        float: left;
+        img{
+          margin-right: 0;
+          margin-left: -10px;
+        }
       }
     }
   }

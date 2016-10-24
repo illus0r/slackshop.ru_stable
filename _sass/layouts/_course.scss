@@ -15,45 +15,44 @@
       -webkit-perspective: 1000;
       /*pointer-event: none;*/
       backface-visibility: hidden;
-      display: none;
+      /*display: none;*/
       height: auto;
       left: 50%;
       perspective: 1000;
       pointer-events: none; //TODO uncomment
       position: absolute;
       top: 0;
-      transform: translate3d(-50%,0,0);
-      width: $parallax-width;
+      transform: translate3d(-55%,0,0);
+      width: 400vw;
       @media (min-width: $width-tablet) {
-        display: block;
+        /*display: block;*/
+        width: $parallax-width;
+        transform: translate3d(-50%,0,0);
       }
     }
-    .rocks{
+    .rocks, .rocks2{
+      display: none;
+      @media (min-width: $width-laptop) {
+        display: block;
+      }
     }
     .clouds{
       background: #fff;
       height: 100%;
+      opacity: 0;
     }
     .sun{
       opacity: 0.1;
     }
-    /*.footer-stone{*/
-      /*[>width: $parallax-width;<]*/
-      /*[>width: 3000px;<]*/
-      /*bottom: 0px;*/
-      /*[>height: 610px;<]*/
-      /*height: 266px;*/
-      /*pointer-events: auto;*/
-      /*top: auto;*/
-      /*transform:  translate3d(-50%, 100%, 0); // hiding on load*/
-      /*width: 100%;*/
-    /*}*/
   }
   article{
     section{
       @include clearfix;
       display: block;
-      margin-bottom: 70px;
+      margin-bottom: $section-margin-bottom / 2;
+      @media (min-width: $width-phone) {
+        margin-bottom: $section-margin-bottom;
+      }
       margin-left: auto;
       margin-right: auto;
     }
@@ -70,41 +69,6 @@
       margin-bottom: 10px;
     }
     .instructor{
-      /*margin-bottom: -10px;*/
-      /*.emerge{*/
-        /*background: #000;*/
-        /*width: 500px;*/
-        /*height: 100px;*/
-        /*position: absolute;*/
-      /*}*/
-      /*.emerge-skill{*/
-        
-      /*}*/
-      /*.emerge-avatar{*/
-        
-      /*}*/
-    }
-    .gallery-wrapper{
-      margin: 0 -500px;
-      overflow: hidden;
-      padding: 0 500px;
-      .gallery{
-        /*width: 795px;*/
-        height: 600px;
-        margin: auto;
-      }
-      .stripe-wrapper{
-        height: 100%;
-      }
-      .stripe{
-        display: inline-block;
-        height: 100%;
-        white-space: nowrap;
-      }
-      img{
-        display: inline-block;
-        height: 100%;
-      }
     }
   }
 }

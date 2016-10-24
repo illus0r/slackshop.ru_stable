@@ -2,10 +2,17 @@
   @include clearfix;
   margin-bottom: 350px;
   .col1, .col2, .col3{
-    @include span(2);
+    p:last-child{
+      margin-bottom: 0;
+    }
+    @media (min-width: $width-phone) {
+      @include span(2);
+    }
   }
   .col3{
-    @include last;
+    @media (min-width: $width-phone) {
+      @include last;
+    }
   }
   svg{
     margin-left: -15px;
@@ -13,14 +20,17 @@
     margin-right: 10px;
   }
   .content{
-    margin-top: -1.2em; // fix it. Ideally margins of float elements should collapse
+    @media (min-width: $width-phone) {
+      margin-top: -1.2em; // fix it. Ideally margins of float elements should collapse
+    }
   }
   .discount{
     // TODO rewrite
     background: url(../img/course/2016-nov-5-antalya/discount.png) 0 0 no-repeat;
     background-size: 100%;
     text-indent: -9999px;
-    height: 180px;
+    height: (365px / 2);
+    max-width:  (544px / 2);
     margin: 20px 0 0 -20px;
     &.crimea{
       background: url(../img/course/2017-apr-crimea/discount.png) 0 0 no-repeat;

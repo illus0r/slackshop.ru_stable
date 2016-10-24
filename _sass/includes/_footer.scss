@@ -2,9 +2,14 @@
   @extend .small;
   @include clearfix;
   @include container;
-  bottom: 35px;
   left: 0;
+  bottom: 15px;
   position: absolute;
+  padding: 0 $body-padding;
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    bottom: 35px;
+  }
   right: 0;
   color: silver;
   a{
@@ -17,9 +22,9 @@
     margin: 0;
   }
   .col{
-    @include span(3);
+    @include span(2);
     &:last-child{
-      @include last;
+      @include span(4 last);
       text-align: right;
     }
   }

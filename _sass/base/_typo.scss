@@ -38,8 +38,12 @@ h1, h2{
   @extend .font-accident;
 }
 h2{
-  font-size: 2.45em;
-  margin-bottom: 0.45em;
+  font-size: 10vw;
+  margin-bottom: 10vw * 0.45;
+  @media (min-width: $width-phone) {
+    font-size: 2.45em;
+    margin-bottom: 0.45em;
+  }
 }
 h3{
   font-weight: bold;

@@ -1,13 +1,13 @@
 <div class="include-section{% if include.mask %} mask{{ include.mask }}{% endif %}{% if include.image_position == 'right' %} image-position-right{% endif %}">
-  <div class="text">
-      {% assign content_html = include.text | markdownify %}
-      {% include typograph.html content=content_html %}
-  </div>
   <div class="image">
     <img src="{{ include.image }}" alt="{{ include.caption | markdownify | strip_html }}">
     <div class="caption">
       {% assign content_html = include.caption | markdownify %}
       {% include typograph.html content=content_html %}
     </div>
+  </div>
+  <div class="text">
+      {% assign content_html = include.text | markdownify %}
+      {% include typograph.html content=content_html %}
   </div>
 </div>

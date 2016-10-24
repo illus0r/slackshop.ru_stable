@@ -1,33 +1,49 @@
 .include-enroll-form{
   $btn-submit-width: 40%;
   $input-height: 44px;
-  /*position: relative;*/
-  /*width: 100%;*/
+  background: #233338;
   bottom: 0;
   color: white;
   left: 0;
   overflow-x: hidden;
+  padding: 0 $body-padding;
   position: absolute;
   right: 0;
+  @media (min-width: $width-tablet) {
+    background: none;
+    padding: 0;
+  }
   .content{
     @include clearfix;
     @include container;
-    height: 170px;
-    margin-top: 140px;
+    height: 240px;
+    margin-top: 60px;
+    @media (min-width: $width-phone){
+      height: 170px;
+      margin-top: 70px;
+    }
+    @media (min-width: $width-tablet){
+      margin-top: 140px;
+    }
   }
   img.background{
-    /*width: 3000px;*/
     bottom: 0;
     left: 50%;
     position: absolute;
     transform:  translate3d(-50%, 0, 0);
     z-index: -1;
+    display: none;
+    @media (min-width: $width-tablet) {
+      display: block;
+    }
   }
   .enroll-form-wrapper{
-    @include span(5);
+    @include span(6);
+    @media (min-width: $width-tablet) {
+      @include span(5);
+    }
   }
   form{
-    /*vertical-align: middle;*/
     display: inline-block;
     position: relative;
     width: 100%;
@@ -41,8 +57,7 @@
     }
     input, button{
       -webkit-appearance: none;
-      /*line-height: $input-height;*/
-      /*vertical-align: top;*/
+      border-radius: 0;
       border: none;
       box-sizing: border-box;
       display: inline-block;
@@ -57,10 +72,11 @@
       border: $outline-width solid transparent;
       padding: 0 8px;
       transition: border-color 300ms;
-      width: 100% - $btn-submit-width;
+      width: 100%;
+      @media (min-width: $width-phone) {
+        width: 100% - $btn-submit-width;
+      }
       &:focus{
-        /*box-shadow: 0 0 10px yellow;*/
-        /*padding: 0 10px - $outline-width;*/
         border-color: $color-accent;
         border: $outline-width solid $color-accent;
       }
@@ -69,20 +85,29 @@
       }
     }
     button{
-      /*float: right;*/
       background: $color-accent;
-      border-radius: 0;
       color: white;
       cursor: pointer;
       margin-right: -100px;
+      margin-top: 6px;
       padding: 0 30px;
       white-space: nowrap;
-      width: $btn-submit-width;
+      padding: 0;
+      max-width: 277px;
+      width: 90%;
+      @media (min-width: $width-phone) {
+        margin-top: 0;
+        width: $btn-submit-width;
+      }
     }
     .enroll-form-status{
+      @extend .small;
       display: none;
       margin-bottom: -0.5em - $line-height;
       margin-top: 0.5em;
+      @media (min-width: $width-tablet) {
+        font-size: $font-size-base;
+      }
       p{
         margin-bottom: 0;
       }
@@ -116,9 +141,12 @@
   .vk{
     /*vertical-align: middle;*/
     @extend .small;
-    @include span(1 last);
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 1em;
+    @media (min-width: $width-tablet) {
+      @include span(1 last);
+      margin-top: 5px;
+    }
     a{
       @include underlined-link(white);
       &:hover{

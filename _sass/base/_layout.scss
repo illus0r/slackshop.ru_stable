@@ -18,4 +18,8 @@ html{
 body{
   @include container();
   @include clearfix;
+  padding: 0 $body-padding;
+  @media (min-width: $width-laptop) {
+    padding: 0;
+  }
 }

@@ -78,7 +78,8 @@
         },
         error: function(err) {
           $formStatus.addClass("error");
-          $formStatus.html("<p>Ой, не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+          //$formStatus.html("<p>Ой, не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+          $formStatus.html("<p>Ой, не получилось. Напишите на&nbsp;почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
           shakeForm();
         }
       });
@@ -87,9 +88,10 @@
       $formStatus.addClass("error");
       $formStatus.show();
       if(attempts < 1){
-        $formStatus.html("<p>Ой, кажется почта неправильная. Попробуйте ещё раз.</p>");
+        $formStatus.html("<p>Ой, кажется почта неправильная. Попробуйте ещё&nbsp;раз.</p>");
       }else{
-        $formStatus.html("<p>Опять не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+        //$formStatus.html("<p>Опять не получилось. Напишите <a href='{{ site.vk }}'>во «Вконтакте»</a> или на почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
+        $formStatus.html("<p>Опять не получилось. Напишите на&nbsp;почту <a href='mailto:{{ site.email }}'>{{ site.email }}</a></p>");
       }
       attempts += 1;
       $form.find('#enroll-form-email').focus();

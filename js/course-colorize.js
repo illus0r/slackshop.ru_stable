@@ -127,9 +127,9 @@ function colorize(file, div, color) {
       if (shape.node.attributes.hasOwnProperty("fill")){
         var fillCurrent = shape.node.attributes.fill.value;
         var hue = rgbToHSL("#"+color).h;
-        console.log(hue);
+        //console.log(hue);
         var hueCurrent = rgbToHSL(fillCurrent).h;
-        console.log(hueCurrent);
+        //console.log(hueCurrent);
         var fill = changeHue(fillCurrent, + hue - hueCurrent);
         shape.attr('fill', fill);
       }

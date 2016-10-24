@@ -1,11 +1,11 @@
 <section class="include-summary">
   <div class="enroll">
+    <div class="btn-wrapper">
+      <a id="scroll-to-form" class="btn">Узнать о наличии мест</a>
+    </div>
     <div class="description">
       {% assign content_html = include.description | markdownify %}
       {% include typograph.html content=content_html %}
-    </div>
-    <div class="btn-wrapper">
-      <a id="scroll-to-form" class="btn">Узнать о наличии мест</a>
     </div>
   </div>
   <div class="audience-groups">
@@ -21,7 +21,7 @@
 $("#scroll-to-form").click(function(){
   $form = $("#enroll-form");
   $form.css({opacity: 0.01, top: 20});
-  $('html, body').animate({
+  $('body').animate({
     scrollTop: $form.offset().top
   }, 1000, "swing", function(){
     $form.animate({opacity: 1, top: 0}, 500, function(){

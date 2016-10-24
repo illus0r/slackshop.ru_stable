@@ -25,16 +25,24 @@ layout: default
     <!--</div>-->
   <!--</div>-->
 
-  <script type="text/javascript" src="/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>
-  <script type="text/javascript" src="/bower_components/skrollr/dist/skrollr.min.js"></script>
+  <!--<script type="text/javascript" src="/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>-->
+  <!--<script type="text/javascript" src="/bower_components/skrollr/dist/skrollr.min.js"></script>-->
   <script type="text/javascript" src="/js/course-birds.js"></script>
   <script type="text/javascript" src="/js/course-colorize.js" color-sun="{{ page.colors.sun }}" color-valley="{{ page.colors.valley }}" color-rocks="{{ page.colors.rocks }}" color-sky="{{ page.colors.sky }}"></script>
   <script type="text/javascript" src="/js/course-skrollr.js"></script>
+  <script src="/bower_components/fittext/fittext.js"></script>
   <script>
   window.onload = function () {
+    window.fitText( document.getElementById("header-responsive"), 0.54 );
     birdsInit();
-    skrollrInit();
     colorizeInit();
+    if(!('ontouchstart' in window || navigator.maxTouchPoints)){
+      $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
+        $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
+          skrollrInit();
+        });
+      });
+    }
   }
   </script>
 </div>

@@ -1,29 +1,39 @@
 .include-picture{
-  margin-bottom: 40px;
+  @media (min-width: $width-phone) {
+    margin-bottom: 40px;
+  }
   img{
-    @include mask(3);
-    margin-bottom: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
     width: 100%;
+    /*margin: 0 -$body-padding;*/
+    /*@media (min-width: $width-phone) {*/
+      /*margin: 0;*/
+    /*}*/
   }
   .caption{
     @extend .small;
   }
-  &.mask1 img{@include mask(1);}
-  &.mask2 img{@include mask(2);}
-  &.mask3 img{@include mask(3);}
-  &.mask4 img{@include mask(4);}
-  &.mask5 img{@include mask(5);}
-  &.mask6 img{@include mask(6);}
-  &.mask7 img{@include mask(7);}
-  &.mask8 img{@include mask(8);}
-  &.mask9 img{@include mask(9);}
-  &.mask10 img{@include mask(10);}
-  &.mask11 img{@include mask(11);}
-  &.mask12 img{@include mask(12);}
-  &.mask13 img{@include mask(13);}
-  &.mask14 img{@include mask(14);}
-  &.mask15 img{@include mask(15);}
-  &.mask16 img{@include mask(16);}
+  @media (min-width: $width-phone) {
+    img{
+      @include mask(3);
+      margin-bottom: -10px;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    &.mask1 img{@include mask(1);}
+    &.mask2 img{@include mask(2);}
+    &.mask3 img{@include mask(3);}
+    &.mask4 img{@include mask(4);}
+    &.mask5 img{@include mask(5);}
+    &.mask6 img{@include mask(6);}
+    &.mask7 img{@include mask(7);}
+    &.mask8 img{@include mask(8);}
+    &.mask9 img{@include mask(9);}
+    &.mask10 img{@include mask(10);}
+    &.mask11 img{@include mask(11);}
+    &.mask12 img{@include mask(12);}
+    &.mask13 img{@include mask(13);}
+    &.mask14 img{@include mask(14);}
+    &.mask15 img{@include mask(15);}
+    &.mask16 img{@include mask(16);}
+  }
 }
