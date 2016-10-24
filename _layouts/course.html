@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<div id="preloader"></div>
+<div id="preloader">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
 <div class="layout-course" style="display: none;">
   <div class="parallax-container parallax-container-back">
     <div id="sun-div" class="parallax sun"></div>
@@ -35,11 +41,9 @@ layout: default
   <script>
 
   $(document).ready(function() {
-  });
-  window.onload = function () {
     birdsInit();
     colorizeInit();
-    if(!('ontouchstart' in window || navigator.maxTouchPoints)){
+    if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
       $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
         $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
           skrollrInit();
@@ -49,6 +53,8 @@ layout: default
     $('.layout-course').show();
     window.fitText( document.getElementById("header-responsive"), 0.54 );
     $('#preloader').hide();
+  });
+  window.onload = function () {
   }
   </script>
 </div>
