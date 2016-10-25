@@ -143,7 +143,33 @@ function colorize(file, div, color) {
 }
 
 
+var colorRocks  = document.currentScript.getAttribute('color-rocks');
+var colorSky    = document.currentScript.getAttribute('color-sky');
+var colorSun    = document.currentScript.getAttribute('color-sun');
+var colorValley = document.currentScript.getAttribute('color-valley');
 
-//function colorizeInit(){
+function colorizeInit(){
+  Snap.load("/img/course/rocks2.svg", function(f){
+    colorize(f, Snap("#rocks2-div"), colorRocks);
+  });
+  Snap.load("/img/course/rocks.svg", function(f){
+    colorize(f, Snap("#rocks-div"), colorRocks);
+  });
 
-//}
+  var skyElement = document.getElementById('sun-div');
+  skyElement.style.background = "#"+colorSky;
+  Snap.load("/img/course/sun.svg", function(f){
+    colorize(f, Snap("#sun-div"), colorSun);
+  });
+
+  Snap.load("/img/course/forest1.svg", function(f){
+    colorize(f, Snap("#forest1-div"), colorValley);
+  });
+  Snap.load("/img/course/forest2.svg", function(f){
+    colorize(f, Snap("#forest2-div"), colorValley);
+  });
+  Snap.load("/img/course/hills.svg", function(f){
+    colorize(f, Snap("#hills-div"), colorValley);
+  });
+
+}
