@@ -19,6 +19,8 @@ body{
   @include container();
   @include clearfix;
   padding: 0 $body-padding;
+  /*margin-bottom: 350px;*/
+  margin-bottom: 180px;
   @media (min-width: $width-laptop) {
     padding: 0;
   }
