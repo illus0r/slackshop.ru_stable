@@ -22,6 +22,11 @@ layout: default
   
   <article>
     {{ content }}
+
+    {% comment %}
+    Enroll form
+    {% endcomment %}
+    {% include course/enroll-form.html title=page.title %}
   </article>
 
   <script type="text/javascript" src="/js/course-birds.js"></script>
@@ -48,3 +53,4 @@ layout: default
   }
   </script>
 </div>
+<!--TODO move somwhere-->
