@@ -1,5 +1,11 @@
 .include-payment{
   @include clearfix;
+  &:after{
+    //ugly fix for footer positioning TODO
+    display: table;
+    widows: 100%;
+    height: 350px;
+  }
   .col1, .col2, .col3{
     p:last-child{
       margin-bottom: 0;
