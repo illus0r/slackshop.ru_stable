@@ -171,5 +171,4 @@ function colorizeInit(){
   Snap.load("/img/course/hills.svg", function(f){
     colorize(f, Snap("#hills-div"), colorValley);
   });
-
 }

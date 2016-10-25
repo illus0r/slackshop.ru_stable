@@ -29,10 +29,7 @@ layout: default
   <script type="text/javascript" src="/js/course-skrollr.js"></script>
   <script src="/bower_components/fittext/fittext.js"></script>
   <script>
-    colorizeInit();
-    birdsInit();
     $(window).on("load", function() {
-      // COLORIZE
       if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
         $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
           $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
@@ -43,6 +40,8 @@ layout: default
       $('.layout-course').show();
       window.fitText( document.getElementById("header-responsive"), 0.54 );
       $('#preloader').hide();
+      colorizeInit();
+      birdsInit();
     });
   </script>
 </div>
