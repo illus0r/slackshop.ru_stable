@@ -150,26 +150,46 @@ var colorValley = document.currentScript.getAttribute('color-valley');
 
 function colorizeInit(){
 
+  //var resource_counter = 0;
+
+  //resource_counter += 1;
   Snap.load("/img/course/rocks2.svg", function(f){
     colorize(f, Snap("#rocks2-div"), colorRocks);
+    //resource_counter -= 1;
   });
+  //resource_counter += 1;
   Snap.load("/img/course/rocks.svg", function(f){
     colorize(f, Snap("#rocks-div"), colorRocks);
+    //resource_counter -= 1;
   });
 
+  //resource_counter += 1;
   var skyElement = document.getElementById('sun-div');
   skyElement.style.background = "#"+colorSky;
   Snap.load("/img/course/sun.svg", function(f){
     colorize(f, Snap("#sun-div"), colorSun);
+    //resource_counter -= 1;
   });
 
+  //resource_counter += 1;
   Snap.load("/img/course/forest1.svg", function(f){
     colorize(f, Snap("#forest1-div"), colorValley);
+    //resource_counter -= 1;
   });
+  //resource_counter += 1;
   Snap.load("/img/course/forest2.svg", function(f){
     colorize(f, Snap("#forest2-div"), colorValley);
+    //resource_counter -= 1;
   });
+  //resource_counter += 1;
   Snap.load("/img/course/hills.svg", function(f){
     colorize(f, Snap("#hills-div"), colorValley);
+    //resource_counter -= 1;
   });
+
+  //function waitForResources(){
+    //console.log(resource_counter);
+    //setTimeout(waitForResources, 10)
+  //}
+  //waitForResources();
 }
