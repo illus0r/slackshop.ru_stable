@@ -30,22 +30,20 @@ layout: default
   <script src="/bower_components/fittext/fittext.js"></script>
   <script>
 
-  birdsInit();
-  colorizeInit();
-  if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
-    $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
-      $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
-        skrollrInit();
-      });
-    });
-  }
-
   $(document).ready(function() {
+    birdsInit();
+    colorizeInit();
+    if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
+      $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
+        $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
+          skrollrInit();
+        });
+      });
+    }
     $('.layout-course').show();
     window.fitText( document.getElementById("header-responsive"), 0.54 );
     $('#preloader').hide();
   });
-
   window.onload = function () {
   }
   </script>

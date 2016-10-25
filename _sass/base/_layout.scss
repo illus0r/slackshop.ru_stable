@@ -16,11 +16,12 @@ html{
   position: relative;
 }
 body{
-  @include container();
-  @include clearfix;
-  padding: 0 $body-padding;
   /*margin-bottom: 350px;*/
-  margin-bottom: 180px;
+  @include clearfix;
+  @include container();
+  background: white;
+  /*margin-bottom: 0px;*/
+  padding: 0 $body-padding;
   @media (min-width: $width-laptop) {
     padding: 0;
   }
