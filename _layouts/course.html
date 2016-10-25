@@ -31,44 +31,48 @@ layout: default
   <script>
 
   $(document).ready(function() {
-    if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
-      $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
-        $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
-          skrollrInit({forceHeight: false});
-        });
-      });
-    }
     // COLORIZE
-    var colorRocks  = "{{ page.colors.rocks }}";
-    var colorSky    = "{{ page.colors.sky }}";
-    var colorSun    = "{{ page.colors.sun }}";
-    var colorValley =  "{{ page.colors.valley }}";
-    Snap.load("/img/course/rocks2.svg", function(f){
-      colorize(f, Snap("#rocks2-div"), colorRocks);
-      Snap.load("/img/course/rocks.svg", function(f){
-        colorize(f, Snap("#rocks-div"), colorRocks);
-        var skyElement = document.getElementById('sun-div');
-        skyElement.style.background = "#"+colorSky;
-        Snap.load("/img/course/sun.svg", function(f){
-          colorize(f, Snap("#sun-div"), colorSun);
-          Snap.load("/img/course/forest1.svg", function(f){
-            colorize(f, Snap("#forest1-div"), colorValley);
-            Snap.load("/img/course/forest2.svg", function(f){
-              colorize(f, Snap("#forest2-div"), colorValley);
-              Snap.load("/img/course/hills.svg", function(f){
-                colorize(f, Snap("#hills-div"), colorValley);
-                birdsInit();
-                $('.layout-course').show();
-                window.fitText( document.getElementById("header-responsive"), 0.54 );
-                $('#preloader').hide();
-              });
+    //var colorRocks  = "{{ page.colors.rocks }}";
+    //var colorSky    = "{{ page.colors.sky }}";
+    //var colorSun    = "{{ page.colors.sun }}";
+    //var colorValley =  "{{ page.colors.valley }}";
+    //Snap.load("/img/course/rocks2.svg", function(f){
+    //  colorize(f, Snap("#rocks2-div"), colorRocks);
+    //});
+    //Snap.load("/img/course/rocks.svg", function(f){
+    //  colorize(f, Snap("#rocks-div"), colorRocks);
+    //});
+
+    //var skyElement = document.getElementById('sun-div');
+    //skyElement.style.background = "#"+colorSky;
+    //Snap.load("/img/course/sun.svg", function(f){
+    //  colorize(f, Snap("#sun-div"), colorSun);
+    //});
+
+    //Snap.load("/img/course/forest1.svg", function(f){
+    //  colorize(f, Snap("#forest1-div"), colorValley);
+    //});
+    //Snap.load("/img/course/forest2.svg", function(f){
+    //  colorize(f, Snap("#forest2-div"), colorValley);
+    //});
+    //Snap.load("/img/course/hills.svg", function(f){
+    //  colorize(f, Snap("#hills-div"), colorValley);
+    //});
+      setTimeout(function(){
+        if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
+          $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
+            $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
+              skrollrInit();
             });
           });
-        });
-      });
-    });
+        }
+        $('.layout-course').show();
+        window.fitText( document.getElementById("header-responsive"), 0.54 );
+        $('#preloader').hide();
+      }, 0);
+      birdsInit();
   });
-  //window.onload = function () {
-  //}
+  window.onload = function () {
+  }
   </script>
 </div>
