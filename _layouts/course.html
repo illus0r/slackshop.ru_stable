@@ -31,18 +31,20 @@ layout: default
   <script>
 
   $(document).ready(function() {
-    birdsInit();
-    colorizeInit();
-    if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
-      $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
-        $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
-          skrollrInit();
-        });
-      });
-    }
-    $('.layout-course').show();
-    window.fitText( document.getElementById("header-responsive"), 0.54 );
-    $('#preloader').hide();
+      birdsInit();
+      colorizeInit();
+      setTimeout(function(){
+        if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
+          $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
+            $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
+              skrollrInit();
+            });
+          });
+        }
+        $('.layout-course').show();
+        window.fitText( document.getElementById("header-responsive"), 0.54 );
+        $('#preloader').hide();
+      }, 4000);
   });
   window.onload = function () {
   }
