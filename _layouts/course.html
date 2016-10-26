@@ -29,10 +29,14 @@ layout: default
   <script type="text/javascript" src="/js/course-skrollr.js"></script>
   <script src="/bower_components/fittext/fittext.js"></script>
   <script>
+    $("#rocks2-div").hide();
+    $("#rocks-div").hide();
     $(window).on("load", function() {
       if(!('ontouchstart' in window || navigator.maxTouchPoints)){ // Skrollr runs on pointer devices only
         $.getScript("/bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js", function(){
           $.getScript("/bower_components/skrollr/dist/skrollr.min.js", function(){
+            $("#rocks2-div").show();
+            $("#rocks-div").show();
             skrollrInit();
           });
         });
