@@ -1,0 +1,12 @@
+[
+	[{"name":"Пирожное", "price":200, "unit":"шт", "expiration": 5, "calorie":1182, "saturation": 3, "quantity": 0, "condition":"normal", "imageNormal": "img/cake.png", "imageSoured": "img/bad-cake.png"}, 
+	{"name":"Колбаса", "price":270, "unit":"шт", "expiration": 7, "calorie":2758, "saturation": 7, "quantity": 0, "condition":"normal", "imageNormal": "img/wurst.png", "imageSoured": "img/bad-wurst.png"}, 
+	{"name":"Молоко","price":80, "unit":"л", "expiration": 2, "calorie":1576, "saturation": 4, "quantity": 0, "condition":"normal", "imageNormal": "img/milk.png", "imageSoured": "img/bad-milk.png"},
+	{"name":"Огурец","price":20, "unit":"шт", "expiration": 7, "calorie":394, "saturation": 1, "quantity": 0, "condition":"normal", "imageNormal": "img/cucumber.png", "imageSoured": "img/bad-cucumber.png"},
+	{"name":"Сыр, 400 г.", "price":350, "unit":"г", "expiration": 7, "calorie":2364, "saturation": 6, "quantity": 0, "condition":"normal", "imageNormal": "img/cheese.png", "imageSoured": "img/bad-cheese.png"}, 
+	{"name":"Помидор", "price":30, "unit":"шт", "expiration": 7, "calorie":394, "saturation": 1, "quantity": 0, "condition":"normal", "imageNormal": "img/tomato.png", "imageSoured": "img/bad-tomato.png"}, 
+	{"name":"Банан","price":20, "unit":"г", "expiration": 7, "calorie":788, "saturation": 2, "quantity": 0, "condition":"normal", "imageNormal": "img/banana.png", "imageSoured": "img/bad-banana.png"},
+	{"name":"Рыба","price":400, "unit":"шт", "expiration": 70, "calorie":3152, "saturation": 8, "quantity": 0, "condition":"normal", "imageNormal": "img/fish.png", "imageSoured": "img/bad-fish.png", "imageFrozen": "img/iced-fish.png"},
+	{"name":"Мясо","price":200, "unit":"г", "expiration": 70, "calorie":1970, "saturation": 5, "quantity": 0, "condition":"normal", "imageNormal": "img/meat.png", "imageSoured": "img/bad-meat.png", "imageFrozen": "img/iced-meat.png"}],
+	["result-phrases"]
+]
