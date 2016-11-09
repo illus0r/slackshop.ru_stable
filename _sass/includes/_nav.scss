@@ -17,6 +17,7 @@
     display: inline-block;
     height: $line-height;
     margin-right: -17px;
+    text-decoration: none;
     text-indent: -9999px;
     vertical-align: bottom;
     width: 30vw;
@@ -49,6 +50,9 @@
       height: $line-height;
       text-align: right;
       vertical-align: bottom;
+      @media (min-width: $width-tablet) {
+        font-size: $font-size-base;
+      }
       span{
         display: inline-block;
         @media (min-width: $width-phone) {

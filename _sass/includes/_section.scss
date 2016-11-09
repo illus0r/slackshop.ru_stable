@@ -21,6 +21,9 @@
       width: 100%;
       @media (min-width: $width-phone) {
         margin-right: -10px;
+        body.firefox &{
+          margin-left: 0;
+        }
       }
     }
     .caption{
@@ -47,6 +50,9 @@
         img{
           margin-right: 0;
           margin-left: -10px;
+          body.firefox &{
+            margin-left: 0;
+          }
         }
       }
     }

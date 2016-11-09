@@ -18,6 +18,11 @@
       margin-bottom: -10px;
       margin-left: -10px;
       margin-right: -10px;
+      body.firefox &{
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
     &.mask1 img{@include mask(1);}
     &.mask2 img{@include mask(2);}

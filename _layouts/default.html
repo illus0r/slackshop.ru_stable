@@ -41,6 +41,9 @@
 <script type="text/javascript" src="/bower_components/fancybox/source/jquery.fancybox.js"></script>
 <script>
 $(document).ready(function() {
+  if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+    $("body").addClass("firefox");
+  }
   $("a.iframe").click(function() {
     $.fancybox({
       'padding'       : 0,
