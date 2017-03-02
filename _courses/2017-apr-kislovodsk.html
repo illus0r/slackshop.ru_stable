@@ -1,0 +1,200 @@
+---
+permalink: kislovodsk/
+dates: 22-29 апреля
+place: Приэльбрусье
+title: "Курс «Хайлайн за 7 дней» 22-29 апреля в Приэльбрусье"
+redirect_from:
+  - /
+colors:
+  rocks:  FF0000
+  valley: FF0000
+  sky:    FF0000
+  sun:    FFFF00
+---
+
+{% comment %}
+Header
+{% endcomment %}
+{% include course/header.html dates=page.dates place=page.place %}
+
+
+
+{% comment %}
+Summary
+{% endcomment %}
+{% assign description = "
+Хайлайн — хождение по ленте на большой высоте. Научим натягивать хайлайн и ходить по нему. Расскажем, как рассчитать нагрузку, какое снаряжение выбрать, каких ошибок избежать.
+
+Подробнее [в программе курса](https://docs.google.com/document/d/15nwqZskmr0IROHi-dKUxua4SvHDF8pxmJ4r3P0qwxqo/edit?usp=sharing) и [фотоотчёте на Риске](http://www.risk.ru/blog/208671). 
+" %}
+{% assign audience_groups = "" | split:"" %}
+{% assign audience_groups = audience_groups | push:"
+**Новички** прокачают теорию и практику, получат заряд мотивации для дальнейшего обучения.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Слэклайнеры**, которые проходят  20-метровые линии, сделают первые шаги на голово&shy;кружи&shy;тельной высоте.
+" %}
+{% assign audience_groups = audience_groups | push:"
+**Хайлайнеры** отточат мастерство, обменяются опытом и привезут домой крутые фотографии.
+" %}
+{% include course/summary.html description=description audience_groups=audience_groups %}
+
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/matvey.jpg" 
+caption="Инструктор курса Матвей Орликов на горе Монте Пиана в Италии. Три километра над уровнем моря"
+%}
+
+
+{% comment %}
+Instructor
+{% endcomment %}
+{% include section.html text="
+Инструк&shy;тор
+---
+*«*{:.quotation-mark}Хожу хайлайны 7 лет. За это время организовал 10 хайлайн-проектов в России, Норвегии, Турции, Греции, Италии, Испании, Франции. Участвовал в международных фестивалях „Хайлайн-митинг Монте Пиана“ в Италии и This rocks в Крыму.
+
+Ещё я альпинист с первым спортивным разрядом. Если участники курса захотят, найдём время на скалолазание».
+" 
+image="/img/course/instructor-matvey.jpg" 
+caption="Матвей Орликов"%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/2.jpg" 
+mask=1
+caption="На Сфинксах две линии: десять и пятнадцать метров. C вами сделаем ещё одну" %}
+
+
+{% comment %}
+Preparation
+{% endcomment %}
+{% include section.html text="
+Физподго&shy;товка
+---
+Рядом с местом курса натянем низкий слэклайн для тренировок. Если что-то будет плохо получаться, отработаем технику на нём. 
+
+Но совсем без подготовки пройти по хайлайну не получится. Заранее потренируйтесь вставать на стропе без опоры и ходить по 20-метровому слэклайну. Вылезать на стропу после срыва будет проще, если вы можете пять раз подтянуться и пять раз поднять прямые ноги в висе.
+" 
+image="/img/course/preparation.jpg" 
+image_position="right"
+mask=4
+caption="[Видеоурок: как встать на слэклайне](https://www.youtube.com/watch?v=rpnLZ1_WrKE&autoplay=1){:.iframe}"
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/5.jpg" 
+mask=3
+caption="Матвей с участниками курса натягивают хайлайн" %}
+
+
+{% comment %}
+Food
+{% endcomment %}
+{% include section.html text="
+Eда
+---
+Купим продукты в Метро и на рынке. В кемпинге есть плита, на ней будем готовить завтрак и ужин. А обед — около линий на газовой горелке.
+
+Если вы вегетарианец, предупредите нас за три дня.
+" 
+image="/img/course/food.jpg" 
+mask=3
+caption=""
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/1.jpg" 
+mask=1
+caption="На Сфинксы поднимемся пешком, скалолазное снаряжение не потребуется" %}
+
+
+{% comment %}
+Place
+{% endcomment %}
+{% include section.html text="
+Место
+---
+
+Курс пройдёт на Сфинксах Каралезской долины. Мы будем жить в [кемпинге](https://vk.com/feed?section=search&q=%23BakchiCamp) с вайфаем и летним душем. Тренировочные линии повесим в лесу, рядом с лагерем. А хайлайн протянем в 25 минутах ходьбы.
+" 
+image="/img/course/2017-apr-crimea/map-cherevko.png" 
+mask=3
+caption="[Кемпинг на Гугль&#8209;карте](https://goo.gl/maps/yGEXWs8wLGG2)"
+image_position="right"
+%}
+
+
+{% comment %}
+Pic
+{% endcomment %}
+{% include picture.html 
+image="/img/course/2017-apr-crimea/camping.jpg" 
+mask=4
+caption="Трёхместная типи в кемпинге Сергея Черевко" %}
+
+
+{% comment %}
+Reviews
+{% endcomment %}
+{% include course/reviews.html %}
+
+
+{% comment %}
+Payment
+{% endcomment %}
+{% assign columns = "" | split:"" %}
+{% assign columns = columns | push:"
+### Курс стоит 16 000 ₽
+
+Предоплата 5000 ₽. Отправьте заявку и мы пришлём номера карты Сбербанка и Яндекс&#x2011;Денег для оплаты.
+
+В стоимость курса входят еда и место в кемпинге.
+
+### + 400 ₽ на проезд
+
+Проезд на маршрутке от аэропорта до Бахчисарая стоит 200 ₽. От Бахчисарая до кемпинга — 15 ₽.
+" %}
+{% assign columns = columns | push:"
+### + 2100 ₽ на палатку и спальник
+
+Арендовать в кемпинге двухместную палатку стоит 200 ₽, а спальник — 100&nbsp;₽&nbsp;за&nbsp;ночь.
+
+Чтобы сэкономить, договоритесь с другим участником курса, что поселитесь в его палатке. Или арендуйте вскладчину. Напишите Матвею, он поможет это организовать.
+" %}
+{% assign columns = columns | push:"
+<div class='discount crimea'>
+  Скидка
+  <span class='value'>
+    1000 ₽
+  </span>
+  при предоплатe до 31 марта
+</div>
+" %}
+{% include course/payment.html columns=columns %}
+
+{% comment %}
+Enroll form
+{% endcomment %}
+{% include course/enroll-form.html title=page.title %}
+
+{% comment %}
+Footer
+{% endcomment %}
+{% include footer.html %}
+
