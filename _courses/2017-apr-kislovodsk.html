@@ -177,11 +177,17 @@ Payment
 
 Чтобы сэкономить, договоритесь с другим участником курса, что поселитесь в его палатке. Или арендуйте вскладчину. Напишите Матвею, он поможет это организовать.
 " %}
+{% assign columns = columns | push:"
+<div class='discount crimea'>
   Скидка
+  <span class='value'>
     1000 ₽
-   при предоплатe до 31 марта
+  </span>
+  при предоплатe до 31 марта
+</div>
+" %}
 {% include course/payment.html columns=columns %}
-
+ 
 {% comment %}
 Enroll form
 {% endcomment %}
