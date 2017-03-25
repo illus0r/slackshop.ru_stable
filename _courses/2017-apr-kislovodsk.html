@@ -32,10 +32,11 @@ Summary
 {% assign audience_groups = audience_groups | push:"
 **Хайлайнеры** отточат мастерство, обменяются опытом и привезут домой крутые фотографии.
 " %}
-{% include course/summary.html description=description audience_groups=audience_groups %}
+{% assign audience_groups = audience_groups | push:"
 **Слэклайнеры**, которые проходят  20-метровые линии, сделают первые шаги на голово&shy;кружи&shy;тельной высоте.
 " %}
-{% assign audience_groups = audience_groups | push:"
+{% include course/summary.html description=description audience_groups=audience_groups %}
+
 
 
 
